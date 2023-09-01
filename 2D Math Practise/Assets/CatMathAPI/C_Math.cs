@@ -40,11 +40,18 @@ public static class C_Math
     public static float Clamp(float value, C_V2 range) =>
         Clamp(value, range.x, range.y);
 
-    public static double ConvertToRange(float z, C_Seq2 x, C_Seq2 y)
+    /// <summary>
+    /// Convert a value within range A to a value within range B. 
+    /// </summary>
+    /// <param name="value"></param>
+    /// <param name="initalRange"></param>
+    /// <param name="newRange"></param>
+    /// <returns>value converted to the Range B scale. </returns>
+    public static double ConvertToRange(float value, C_Seq2 initalRange, C_Seq2 newRange)
     {
-        float numerator = z - x.E0;
-        float denominator = x.E1 - x.E0;
-        float multiplier = (y.E1 - y.E0); 
+        float numerator = value - initalRange.E0;
+        float denominator = initalRange.E1 - initalRange.E0;
+        float multiplier = (newRange.E1 - newRange.E0); 
 
         return (numerator / denominator) * multiplier;
     }
