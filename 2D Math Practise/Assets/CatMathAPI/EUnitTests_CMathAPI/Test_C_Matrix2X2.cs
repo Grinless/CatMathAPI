@@ -18,6 +18,101 @@ public class Test_C_Matrix2X2
     }
 
     [Test]
+    public void Test_CM2X2_Copy()
+    {
+        C_M2X2 orignal = new C_M2X2(1, 2, 3, 4);
+        C_M2X2 copyTar = new C_M2X2(0, 0, 0, 0);
+        C_M2X2.Copy(copyTar, ref orignal);
+        Assert.AreEqual(orignal, copyTar);
+        Assert.AreEqual(C_M2X2.Zero, orignal);
+
+        orignal = new C_M2X2(1, 2, 3, 4);
+        copyTar = new C_M2X2(1, 1, 1, 1);
+        C_M2X2.Copy(copyTar, ref orignal);
+        Assert.AreEqual(orignal, copyTar);
+        Assert.AreEqual(new C_M2X2(1, 1, 1, 1), orignal);
+    }
+
+    [Test]
+    public void Test_CM2X2_Transpose()
+    {
+        C_M2X2 orignal = new C_M2X2(
+            1, 2, 
+            3, 4
+            );
+        C_M2X2 transpose = C_M2X2.Transpose(orignal);
+        C_M2X2 expectedOutput = new C_M2X2(
+            1, 3,
+            2, 4
+            );
+
+        Assert.AreEqual(expectedOutput, transpose);
+    }
+
+    [Test]
+    public void Test_CM2X2_EqualityOperator()
+    {
+        C_M2X2 orignal = new C_M2X2(0, 0, 0, 0);
+        C_M2X2 copyTar = new C_M2X2(0, 0, 0, 0);
+        Assert.True(orignal == copyTar);
+
+        orignal = new C_M2X2(1, 1, 1, 1);
+        copyTar = new C_M2X2(1, 1, 1, 1);
+        Assert.True(orignal == copyTar);
+
+        copyTar = new C_M2X2(0, 1, 0, 1);
+        Assert.IsFalse(orignal == copyTar);
+    }
+
+    [Test]
+    public void Test_CM2X2_InequalityOperator()
+    {
+        C_M2X2 orignal = new C_M2X2(0, 0, 0, 0);
+        C_M2X2 copyTar = new C_M2X2(1, 0, 1, 0);
+        Assert.True(orignal != copyTar);
+
+        orignal = new C_M2X2(1, 1, 1, 1);
+        copyTar = new C_M2X2(1, 1, 1, 2);
+        Assert.True(orignal != copyTar);
+
+        copyTar = new C_M2X2(0, 1, 0, 1);
+        Assert.IsFalse(orignal == copyTar);
+    }
+
+    [Test]
+    public void Test_CM2X2_AdditionOperator()
+    {
+        C_M2X2 orignal = new C_M2X2(0, 0, 0, 0);
+        C_M2X2 copyTar = new C_M2X2(1, 0, 1, 0);
+        Assert.AreEqual(new C_M2X2(1, 0, 1, 0), orignal + copyTar);
+
+        orignal = new C_M2X2(0, 0, 0, 0);
+        copyTar = new C_M2X2(-1, 0, -1, 0);
+        Assert.AreEqual(new C_M2X2(-1, 0, -1, 0), orignal + copyTar);
+
+        orignal = new C_M2X2(5, 3, 2, 1);
+        copyTar = new C_M2X2(1, 3, 1, 4);
+        Assert.AreEqual(new C_M2X2(6, 6, 3, 5), orignal + copyTar);
+    }
+
+    [Test]
+    public void Test_CM2X2_SubtractionOperator()
+    {
+        C_M2X2 orignal = new C_M2X2(0, 0, 0, 0);
+        C_M2X2 copyTar = new C_M2X2(1, 0, 1, 0);
+        Assert.AreEqual(new C_M2X2(-1, 0, -1, 0), orignal - copyTar);
+
+        orignal = new C_M2X2(0, 0, 0, 0);
+        copyTar = new C_M2X2(-1, 0, -1, 0);
+        Assert.AreEqual(new C_M2X2(1, 0, 1, 0), orignal - copyTar);
+
+        orignal = new C_M2X2(5, 3, 2, 1);
+        copyTar = new C_M2X2(1, 3, 1, 4);
+        Assert.AreEqual(new C_M2X2(4, 0, 1, -3), orignal - copyTar);
+    }
+
+
+    [Test]
     public void Test_CM2X2_RowGetters()
     {
         C_M2X2 test = new C_M2X2(1, 2, 3, 4);
@@ -55,12 +150,6 @@ public class Test_C_Matrix2X2
     }
 
     [Test]
-    public void Test_C_Matrix2X2SimplePasses()
-    {
-        // Use the Assert class to test conditions
-    }
-
-    [Test]
     public void Test_C_Matrix2X2_Multiplication()
     {
         C_M2X2 a = new C_M2X2(1, 2, 3, 4);
@@ -69,15 +158,5 @@ public class Test_C_Matrix2X2
         b.PrintMatrix();
 
         Assert.AreEqual(new C_M2X2(3, 3, 7, 7), a * b);
-    }
-
-    // A UnityTest behaves like a coroutine in Play Mode. In Edit Mode you can use
-    // `yield return null;` to skip a frame.
-    [UnityTest]
-    public IEnumerator Test_C_Matrix2X2WithEnumeratorPasses()
-    {
-        // Use the Assert class to test conditions.
-        // Use yield to skip a frame.
-        yield return null;
     }
 }

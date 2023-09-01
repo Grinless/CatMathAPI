@@ -304,7 +304,7 @@ public struct C_M4X4
             );
     }
 
-    ///TODO: TEST THIS FUNCTION CAUSE IT LOOKS DODGEY ASF. 
+    ///TODO: TEST THIS FUNCTION CAUSE IT LOOKS WEIRD ASF. 
     public static C_M4X4 ShearMatrix(float shearX, float shearY)
     {
         return new(

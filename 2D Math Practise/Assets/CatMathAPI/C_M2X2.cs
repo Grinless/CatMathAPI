@@ -15,17 +15,21 @@ public struct C_M2X2
     public float E10;
     public float E11;
 
+    #region Shorthand References. 
     private static C_M2X2 identity = new C_M2X2(1, 0, 1, 0);
     private static C_M2X2 zero = new C_M2X2(0, 0, 0, 0);
-
     public static C_M2X2 Identity => identity;
     public static C_M2X2 Zero => zero;
+    #endregion
 
+    #region Row/Column Access Properties. 
     public readonly C_Seq2 R1 => new C_Seq2(E00, E01);
     public readonly C_Seq2 R2 => new C_Seq2(E10, E11);
     public readonly C_Seq2 C1 => new C_Seq2(E00, E10);
     public readonly C_Seq2 C2 => new C_Seq2(E01, E11);
+    #endregion
 
+    #region CTORS. 
     public C_M2X2(float e00, float e01, float e10, float e11)
     {
         E00 = e00;
@@ -33,6 +37,7 @@ public struct C_M2X2
         E10 = e10;
         E11 = e11;
     }
+    #endregion
 
     public static void Copy(C_M2X2 a, ref C_M2X2 b)
     {
@@ -83,6 +88,35 @@ public struct C_M2X2
                string.Format(str2, E10, E11) + "\n";
     }
 
+    public override bool Equals(object obj)
+    {
+        C_M2X2 objInst;
+
+        if ((obj is C_M2X2))
+        {
+            objInst = (C_M2X2)obj;
+
+            return (
+                R1.E0 == objInst.R1.E0 &&
+                R1.E1 == objInst.R1.E1 &&
+                R2.E0 == objInst.R2.E0 &&
+                R2.E1 == objInst.R2.E1
+                );
+        }
+
+        return false;
+    }
+
+    public override int GetHashCode()
+    {
+        int hash = 17;
+        hash = hash * 23 + R1.GetHashCode();
+        hash = hash * 23 + R2.GetHashCode();
+        hash = hash * 23 + C1.GetHashCode();
+        hash = hash * 23 + C2.GetHashCode();
+        return hash;
+    }
+
     public static C_M2X2 operator *(float scalar, C_M2X2 rhs)
     {
         C_M2X2 r = new C_M2X2(
@@ -121,41 +155,17 @@ public struct C_M2X2
 
     public static C_M2X2 operator -(C_M2X2 lhs, C_M2X2 rhs)
     {
-        return lhs + (-1.0F * rhs);
+        C_M2X2 r = new C_M2X2();
+        r.E00 = lhs.E00 - rhs.E00;
+        r.E01 = lhs.E01 - rhs.E01;
+        r.E10 = lhs.E10 - rhs.E10;
+        r.E11 = lhs.E11 - rhs.E11;
+        return r;
     }
 
     //Unit Test this. 
     public static implicit operator C_M2X2(C_M3X3 m) =>
         new C_M2X2(m.E00, m.E01, m.E10, m.E11);
-
-    public override bool Equals(object obj)
-    {
-        C_M2X2 objInst;
-
-        if ((obj is C_M2X2))
-        {
-            objInst = (C_M2X2)obj;
-
-            return (
-                R1.E0 == objInst.R1.E0 &&
-                R1.E1 == objInst.R1.E1 &&
-                R2.E0 == objInst.R2.E0 &&
-                R2.E1 == objInst.R2.E1
-                );
-        }
-
-        return false;
-    }
-
-    public override int GetHashCode()
-    {
-        int hash = 17;
-        hash = hash * 23 + R1.GetHashCode();
-        hash = hash * 23 + R2.GetHashCode();
-        hash = hash * 23 + C1.GetHashCode();
-        hash = hash * 23 + C2.GetHashCode();
-        return hash;
-    }
 
     public static bool operator ==(C_M2X2 x, C_M2X2 y)
     {
