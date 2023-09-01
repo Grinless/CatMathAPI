@@ -106,8 +106,8 @@ public struct C_M2X2
     /// Returns the Adjoint C_M2X2. 
     /// </summary>
     public C_M2X2 Adjoint => new C_M2X2(
-             E11, -E01,
-            -E10, E00
+             E11, -E10,
+            -E01, E00
             );
 
     #endregion
