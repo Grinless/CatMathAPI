@@ -40,4 +40,12 @@ public static class C_Math
     public static float Clamp(float value, C_V2 range) =>
         Clamp(value, range.x, range.y);
 
+    public static double ConvertToRange(float z, C_Seq2 x, C_Seq2 y)
+    {
+        float numerator = z - x.E0;
+        float denominator = x.E1 - x.E0;
+        float multiplier = (y.E1 - y.E0); 
+
+        return (numerator / denominator) * multiplier;
+    }
 }
