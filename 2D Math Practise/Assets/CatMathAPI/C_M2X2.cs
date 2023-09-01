@@ -10,26 +10,81 @@ using UnityEngine;
 [System.Serializable]
 public struct C_M2X2
 {
-    public float E00; 
+    /// <summary>
+    /// The float value of the first row first column. 
+    /// </summary>
+    public float E00;
+    /// <summary>
+    /// The float value of the first row second column. 
+    /// </summary>
     public float E01;
+    /// <summary>
+    /// The float value of the second row first column. 
+    /// </summary>
     public float E10;
+    /// <summary>
+    /// The float value of the second row second column. 
+    /// </summary>
     public float E11;
 
     #region Shorthand References. 
     private static C_M2X2 identity = new C_M2X2(1, 0, 1, 0);
     private static C_M2X2 zero = new C_M2X2(0, 0, 0, 0);
+    /// <summary>
+    /// Returns a C_M2X2 with diagonal elements set to 1. 
+    /// </summary>
     public static C_M2X2 Identity => identity;
+    /// <summary>
+    /// Returns a C_M2X2 with all elements set to 0. 
+    /// </summary>
     public static C_M2X2 Zero => zero;
     #endregion
 
     #region Row/Column Access Properties. 
+    /// <summary>
+    /// Returns the elements held in the first row of the matrix 
+    /// </summary>
     public readonly C_Seq2 R1 => new C_Seq2(E00, E01);
+    /// <summary>
+    /// Returns the elements held in the second row of the matrix 
+    /// </summary>
     public readonly C_Seq2 R2 => new C_Seq2(E10, E11);
+    /// <summary>
+    /// Returns the elements held in the first column of the matrix 
+    /// </summary>
     public readonly C_Seq2 C1 => new C_Seq2(E00, E10);
+    /// <summary>
+    /// Returns the elements held in the second column of the matrix 
+    /// </summary>
     public readonly C_Seq2 C2 => new C_Seq2(E01, E11);
     #endregion
 
+    #region Math Properties. 
+
+    /// <summary>
+    /// Returns the determinant of the C_M2X2. 
+    /// </summary>
+    public float Determinant =>  
+        E00 * E11 - E10 * E01;
+    
+    /// <summary>
+    /// Returns the Adjoint C_M2X2. 
+    /// </summary>
+    public C_M2X2 Adjoint => new C_M2X2(
+             E11, -E01,
+            -E10, E00
+            );
+
+    #endregion
+
     #region CTORS. 
+    /// <summary>
+    /// Create a C_M2X2 matrix. 
+    /// </summary>
+    /// <param name="e00"> The float value of the first row first column.   </param>
+    /// <param name="e01"> The float value of the first row second column.  </param>
+    /// <param name="e10"> The float value of the second row first column.  </param>
+    /// <param name="e11"> The float value of the second row second column. </param>
     public C_M2X2(float e00, float e01, float e10, float e11)
     {
         E00 = e00;
@@ -39,6 +94,40 @@ public struct C_M2X2
     }
     #endregion
 
+    /// <summary>
+    /// Returns a copy of C_M2X2 with all rows set to columns.  
+    /// </summary>
+    /// <param name="a"> The C_M2X2 to transpose. </param>
+    public static C_M2X2 Transpose(C_M2X2 a)
+    {
+        return new C_M2X2(a.E00, a.E10, a.E01, a.E11);
+    }
+
+    //TODO: Setup the TRS functions here. 
+    //TODO: Setup seperate affine transformation functions here. 
+    
+    public C_M2X2 Inverse()
+    {
+        C_M2X2 copy = C_M2X2.Zero;
+        C_M2X2.Copy(this, ref copy);
+
+        float det = copy.Determinant; 
+
+        //If the det is zero the inverse does not exist. 
+        if(det == 0)
+            return C_M2X2.Zero;
+
+        //Calculate the inverse matric and return. 
+        return (1 / det) * copy.Adjoint; 
+
+    }
+
+    #region Utility Functions. 
+    /// <summary>
+    /// Copy the elements of the first matrix to the second. 
+    /// </summary>
+    /// <param name="a"> The C_M2X2 matrix to copy. </param>
+    /// <param name="b"> The reciving C_M2X2 instance. </param>
     public static void Copy(C_M2X2 a, ref C_M2X2 b)
     {
         b.E00 = a.E00; 
@@ -46,40 +135,19 @@ public struct C_M2X2
         b.E10 = a.E10; 
         b.E11 = a.E11;
     }
-
-    public static C_M2X2 Transpose(C_M2X2 a)
-    {
-        return new C_M2X2(a.E00, a.E10, a.E01, a.E11);
-    }
-
-    public static C_V2 TRS_OP(C_Seq2 pos, C_Seq2 translation, C_Seq2 scale, float theta)
-    {
-        float cosT = MathF.Cos(theta * Mathf.Deg2Rad);
-        float sinT = MathF.Sin(theta * Mathf.Deg2Rad);
-
-        return new C_V2(
-            (pos.E0 * scale.E0 * cosT) - (pos.E1 * scale.E0 * sinT) + (translation.E0 * 1),
-            (pos.E0 * scale.E1 * sinT) + (pos.E1 * scale.E1 * cosT) + (translation.E1 * 1)
-            );
-    }
-
-    public static C_V2 TRS_OP(C_V2 pos, C_V2 translation,
-        C_V2 scale, float theta)
-    {
-        float cosT = MathF.Cos(theta * Mathf.Deg2Rad);
-        float sinT = MathF.Sin(theta * Mathf.Deg2Rad);
-
-        return new C_V2(
-            (pos.x * scale.x * cosT) - (pos.y * scale.x * sinT) + (translation.x * 1),
-            (pos.x * scale.y * sinT) + (pos.y * scale.y * cosT) + (translation.y * 1)
-            );
-    }
-
+   
+    /// <summary>
+    /// Print the matrix to using Unity Engines built in debugger. 
+    /// </summary>
     public void PrintMatrix()
     {
         Debug.Log(this.ToString());
     }
 
+    /// <summary>
+    /// Retrive the C_M2X2 formatted as a string. 
+    /// </summary>
+    /// <returns> String formatted copy of the matrix. </returns>
     public override string ToString()
     {
         string str1 = "[{0} {1}] \n";
@@ -116,7 +184,9 @@ public struct C_M2X2
         hash = hash * 23 + C2.GetHashCode();
         return hash;
     }
+    #endregion
 
+    #region Operators. 
     public static C_M2X2 operator *(float scalar, C_M2X2 rhs)
     {
         C_M2X2 r = new C_M2X2(
@@ -176,4 +246,5 @@ public struct C_M2X2
     {
         return !x.Equals(y);
     }
+    #endregion
 }
