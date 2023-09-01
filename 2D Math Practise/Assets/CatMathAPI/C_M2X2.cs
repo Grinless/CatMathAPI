@@ -44,19 +44,54 @@ public struct C_M2X2
     /// <summary>
     /// Returns the elements held in the first row of the matrix 
     /// </summary>
-    public readonly C_Seq2 R1 => new C_Seq2(E00, E01);
+    public C_Seq2 R1
+    {
+        get => new C_Seq2(E00, E01);
+        set
+        {
+            E00 = value.E0;
+            E01 = value.E1;
+        }
+    }
+
     /// <summary>
     /// Returns the elements held in the second row of the matrix 
     /// </summary>
-    public readonly C_Seq2 R2 => new C_Seq2(E10, E11);
+    public C_Seq2 R2
+    {
+        get => new C_Seq2(E10, E11);
+        set
+        {
+            E10 = value.E0;
+            E11 = value.E1;
+        }
+    }
+
     /// <summary>
     /// Returns the elements held in the first column of the matrix 
     /// </summary>
-    public readonly C_Seq2 C1 => new C_Seq2(E00, E10);
+    public C_Seq2 C1
+    {
+        get => new C_Seq2(E00, E10);
+        set
+        {
+            E00 = value.E0;
+            E10 = value.E1;
+        }
+    }
+
     /// <summary>
     /// Returns the elements held in the second column of the matrix 
     /// </summary>
-    public readonly C_Seq2 C2 => new C_Seq2(E01, E11);
+    public C_Seq2 C2
+    {
+        get => new C_Seq2(E01, E11);
+        set
+        {
+            E01 = value.E0;
+            E11 = value.E1;
+        }
+    }
     #endregion
 
     #region Math Properties. 
@@ -64,9 +99,9 @@ public struct C_M2X2
     /// <summary>
     /// Returns the determinant of the C_M2X2. 
     /// </summary>
-    public float Determinant =>  
+    public float Determinant =>
         E00 * E11 - E10 * E01;
-    
+
     /// <summary>
     /// Returns the Adjoint C_M2X2. 
     /// </summary>
@@ -95,30 +130,43 @@ public struct C_M2X2
     #endregion
 
     /// <summary>
-    /// Returns a copy of C_M2X2 with all rows set to columns.  
+    /// Interchange C_M2X2 a's rows with columns.  
     /// </summary>
-    /// <param name="a"> The C_M2X2 to transpose. </param>
-    public static C_M2X2 Transpose(C_M2X2 a)
+    /// <param name="a"> The C_M2X2 to transpose.</param>
+    public void Transpose()
     {
-        return new C_M2X2(a.E00, a.E10, a.E01, a.E11);
+        C_M2X2.Transpose(ref this);
     }
 
-    //TODO: Setup the TRS functions here. 
-    //TODO: Setup seperate affine transformation functions here. 
-    
+    /// <summary>
+    /// Interchange C_M2X2 a's rows with columns.  
+    /// </summary>
+    /// <param name="a"> The C_M2X2 to transpose.</param>
+    public static void Transpose(ref C_M2X2 a)
+    {
+        C_Seq2 _a = a.R1;
+        C_Seq2 _b = a.R2;
+        a.C1 = _a;
+        a.C2 = _b;
+    }
+
+    /// <summary>
+    /// Returns the inverse C_M2X2 of this C_M2X2 if defined.
+    /// If the inverse cannot be generated, returns zero matrix. 
+    /// </summary>
     public C_M2X2 Inverse()
     {
         C_M2X2 copy = C_M2X2.Zero;
         C_M2X2.Copy(this, ref copy);
 
-        float det = copy.Determinant; 
+        float det = copy.Determinant;
 
         //If the det is zero the inverse does not exist. 
-        if(det == 0)
+        if (det == 0)
             return C_M2X2.Zero;
 
         //Calculate the inverse matric and return. 
-        return (1 / det) * copy.Adjoint; 
+        return (1 / det) * copy.Adjoint;
 
     }
 
@@ -130,12 +178,12 @@ public struct C_M2X2
     /// <param name="b"> The reciving C_M2X2 instance. </param>
     public static void Copy(C_M2X2 a, ref C_M2X2 b)
     {
-        b.E00 = a.E00; 
-        b.E01 = a.E01; 
-        b.E10 = a.E10; 
+        b.E00 = a.E00;
+        b.E01 = a.E01;
+        b.E10 = a.E10;
         b.E11 = a.E11;
     }
-   
+
     /// <summary>
     /// Print the matrix to using Unity Engines built in debugger. 
     /// </summary>
@@ -210,7 +258,7 @@ public struct C_M2X2
         //r.E10 = a.E10 * b.E00 + a.E11 * b.E10;
         //r.E01 = a.E00 * b.E01 + a.E01 * b.E11;
         //r.E11 = a.E10 * b.E01 + a.E11 * b.E11;
-        return r; 
+        return r;
     }
 
     public static C_M2X2 operator +(C_M2X2 lhs, C_M2X2 rhs)

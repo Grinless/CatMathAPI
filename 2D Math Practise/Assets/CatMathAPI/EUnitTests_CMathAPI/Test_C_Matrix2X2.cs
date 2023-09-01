@@ -111,7 +111,6 @@ public class Test_C_Matrix2X2
         Assert.AreEqual(new C_M2X2(4, 0, 1, -3), orignal - copyTar);
     }
 
-
     [Test]
     public void Test_CM2X2_RowGetters()
     {

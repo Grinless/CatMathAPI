@@ -5,20 +5,60 @@ using UnityEngine;
 
 public struct C_M3X3
 {
-    public float E00, E01, E02;
-    public float E10, E11, E12;
-    public float E20, E21, E22;
+    /// <summary>
+    /// The float value of the first row first column. 
+    /// </summary>
+    public float E00;
+    /// <summary>
+    /// The float value of the first row second column. 
+    /// </summary>
+    public float E01;
+    /// <summary>
+    /// The float value of the first row third column. 
+    /// </summary>
+    public float E02;
+    /// <summary>
+    /// The float value of the second row first column. 
+    /// </summary>
+    public float E10;
+    /// <summary>
+    /// The float value of the second row second column. 
+    /// </summary>
+    public float E11;
+    /// <summary>
+    /// The float value of the second row third column. 
+    /// </summary>
+    public float E12;
+    /// <summary>
+    /// The float value of the third row first column. 
+    /// </summary>
+    public float E20;
+    /// <summary>
+    /// The float value of the third row second column. 
+    /// </summary>
+    public float E21;
+    /// <summary>
+    /// The float value of the third row third column. 
+    /// </summary>
+    public float E22;
 
     #region Shorthand Refs. 
-    private static C_M2X2 identity = new C_M2X2(
-        1, 0, 
-        0, 1
+    private static C_M3X3 identity = new C_M3X3(
+        1, 0, 0, 
+        0, 1, 0,
+        0, 0, 1
         );
-    private static C_M2X2 zero = new C_M2X2(0, 0, 0, 0);
-    public static C_M2X2 Identity => identity;
-    public static C_M2X2 Zero => zero;
+    private static C_M3X3 zero = 
+        new C_M3X3(
+            0, 0, 0, 
+            0, 0, 0,
+            0, 0, 0
+            );
+    public static C_M3X3 Identity => identity;
+    public static C_M3X3 Zero => zero;
     #endregion
 
+    #region Row/Column Access Properties. 
     public C_Seq3 R1
     {
         get => new C_Seq3(E00, E01, E02);
@@ -84,7 +124,20 @@ public struct C_M3X3
             E22 = value.E2;
         }
     }
+    #endregion
 
+    /// <summary>
+    /// Create a new C_M3X3. 
+    /// </summary>
+    /// <param name="E00"> The float value of the first row first column.   </param>
+    /// <param name="E01"> The float value of the first row second column.  </param>
+    /// <param name="E02"> The float value of the first row third column.   </param>
+    /// <param name="E10"> The float value of the second row first column.  </param>
+    /// <param name="E11"> The float value of the second row second column. </param>
+    /// <param name="E12"> The float value of the second row third column.  </param>
+    /// <param name="E20"> The float value of the third row first column.   </param>
+    /// <param name="E21"> The float value of the third row second column.  </param>
+    /// <param name="E22"> The float value of the third row third column.   </param>
     public C_M3X3(float E00, float E01, float E02, float E10,
         float E11, float E12, float E20, float E21, float E22)
     {
@@ -98,7 +151,36 @@ public struct C_M3X3
         this.E21 = E21;
         this.E22 = E22;
     }
+    
+    /// <summary>
+    /// Interchange C_M3X3 rows with columns. 
+    /// </summary>
+    public void Transpose()
+    {
+        C_M3X3.Transpose(ref this);
+    }
 
+    /// <summary>
+    /// Interchange C_M3X3 a's rows with columns.  
+    /// </summary>
+    /// <param name="a"> The C_M2X2 to transpose.</param>
+    public static void Transpose(ref C_M3X3 a)
+    {
+        C_Seq3 r1 = a.R1;
+        C_Seq3 r2 = a.R2;
+        C_Seq3 r3 = a.R3;
+
+        a.C1 = r1; 
+        a.C2 = r2;
+        a.C3 = r3;
+    }
+
+    #region Utility Functions. 
+    /// <summary>
+    /// Returns C_M3X3 b with copied elements from C_M3X3 a.
+    /// </summary>
+    /// <param name="a"> The C_M3X3 to copy. </param>
+    /// <param name="b"> The recipient C_M3X3. </param>
     public static void Copy(C_M3X3 a, ref C_M3X3 b)
     {
         b.E00 = a.E00;
@@ -117,27 +199,18 @@ public struct C_M3X3
         b.E22 = a.E22;
     }
 
-    public void Transpose()
-    {
-        C_M3X3.Transpose(ref this);
-    }
-
-    public static void Transpose(ref C_M3X3 a)
-    {
-        C_Seq3 r1 = a.R1;
-        C_Seq3 r2 = a.R2;
-        C_Seq3 r3 = a.R3;
-
-        a.C1 = r1; 
-        a.C2 = r2;
-        a.C3 = r3;
-    }
-
+    /// <summary>
+    /// Print the C_M3X3 to using Unity Engines built in debugger. 
+    /// </summary>
     public void PrintMatrix()
     {
         Debug.Log(this.ToString());
     }
 
+    /// <summary>
+    /// Retrive the C_M3X3 formatted as a string. 
+    /// </summary>
+    /// <returns> String formatted copy of the matrix. </returns>
     public override string ToString()
     {
         string str1 = "[{0} {1} {3}]";
@@ -147,6 +220,7 @@ public struct C_M3X3
                string.Format(str2, E10, E11, E12) + "\n" +
                string.Format(str3, E20, E21, E22) + "\n";
     }
+    #endregion
 
     public static C_M3X3 TranslationMatrixX(float x)
     {
