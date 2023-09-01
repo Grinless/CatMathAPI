@@ -7,235 +7,311 @@ using UnityEngine;
 
 public struct C_M4X4
 {
-    //private const string ROW_ACCESS_ID_ERROR =
-    //"C_Matrix3x3 does not define rows outside the range [0, 2].";
+    public float E00, E01, E02, E03;
+    public float E10, E11, E12, E13;
+    public float E20, E21, E22, E23;
+    public float E30, E31, E32, E33;
 
-    //private const string COLUMN_ACCESS_ID_ERROR =
-    //"C_Matrix3x3 does not define columns outside the range [0, 2].";
+    #region Shorthand Refs. 
+    private static C_M4X4 identity = new C_M4X4(
+        1, 0, 0, 0, 
+        0, 1, 0, 0,
+        0, 0, 1, 0,
+        0, 0, 0, 0
+        );
+    private static C_M4X4 zero = new C_M4X4(
+        0, 0, 0, 0,
+        0, 0, 0, 0,
+        0, 0, 0, 0,
+        0, 0, 0, 0
+        );
+    public static C_M4X4 Identity => identity;
+    public static C_M4X4 Zero => zero;
+    #endregion
 
-    //private C_Seq4 _C0;
-    //private C_Seq4 _C1;
-    //private C_Seq4 _C2;
-    //private C_Seq4 _C3;
+    #region Row/Column Access Properties. 
+    public C_Seq4 R1
+    {
+        get => new C_Seq4(E00, E01, E02, E03);
+        set
+        {
+            E00 = value.E0;
+            E01 = value.E1;
+            E02 = value.E2;
+            E03 = value.E3;
+        }
+    }
 
-    //public readonly C_Seq4 C0 => _C0; 
-    //public readonly C_Seq4 C1 => _C1; 
-    //public readonly C_Seq4 C2 => _C2; 
-    //public readonly C_Seq4 C3 => _C3; 
+    public C_Seq4 R2
+    {
+        get => new C_Seq4(E10, E11, E12, E13);
+        set
+        {
+            E10 = value.E0;
+            E11 = value.E1;
+            E12 = value.E2;
+            E13 = value.E3;
+        }
+    }
 
-    //public readonly C_Seq4 R0 => new C_Seq4(_C0.E0, _C1.E0, _C2.E0, _C3.E0);
-    //public readonly C_Seq4 R1 => new C_Seq4(_C0.E1, _C1.E1, _C2.E1, _C3.E1);
-    //public readonly C_Seq4 R2 => new C_Seq4(_C0.E2, _C1.E2, _C2.E2, _C3.E2);
-    //public readonly C_Seq4 R3 => new C_Seq4(_C0.E3, _C1.E3, _C2.E3, _C3.E3);
+    public C_Seq4 R3
+    {
+        get => new C_Seq4(E20, E21, E22, E23);
+        set
+        {
+            E20 = value.E0;
+            E21 = value.E1;
+            E22 = value.E2;
+            E23 = value.E3;
+        }
+    }
 
-    //public C_M4X4 Zero =>
-    //new C_M4X4(
-    //    C_Seq4.Zero,
-    //    C_Seq4.Zero,
-    //    C_Seq4.Zero,
-    //    C_Seq4.Zero
-    //    );
+    public C_Seq4 R4
+    {
+        get => new C_Seq4(E30, E31, E32, E33);
+        set
+        {
+            E30 = value.E0;
+            E31 = value.E1;
+            E32 = value.E2;
+            E33 = value.E3;
+        }
+    }
 
-    //public C_M4X4 Identity =>
-    //    new C_M4X4(
-    //        C_Seq4.SeqX,
-    //        C_Seq4.SeqY,
-    //        C_Seq4.SeqZ,
-    //        C_Seq4.SeqW
-    //        );
+    public C_Seq4 C1
+    {
+        get => new C_Seq4(E00, E10, E20, E30);
+        set
+        {
+            E00 = value.E0;
+            E10 = value.E1;
+            E20 = value.E2;
+            E30 = value.E3;
+        }
+    }
 
-    //public C_M4X4(C_Seq4 x, C_Seq4 y, C_Seq4 z, C_Seq4 w)
-    //{
-    //    this._C0 = x;
-    //    this._C1 = y;
-    //    this._C2 = z;
-    //    this._C3 = w;
-    //}
+    public C_Seq4 C2
+    {
+        get => new C_Seq4(E01, E11, E21, E31);
+        set
+        {
+            E01 = value.E0;
+            E11 = value.E1;
+            E21 = value.E2;
+            E21 = value.E3;
+        }
+    }
 
-    //#region Multiplication Functions.
+    public C_Seq4 C3
+    {
+        get => new C_Seq4(E02, E12, E22, E32);
+        set
+        {
+            E02 = value.E0;
+            E12 = value.E1;
+            E22 = value.E2;
+            E32 = value.E3;
+        }
+    }
 
-    //#endregion
+    public C_Seq4 C4
+    {
+        get => new C_Seq4(E03, E13, E23, E33);
+        set
+        {
+            E03 = value.E0;
+            E13 = value.E1;
+            E23 = value.E2;
+            E33 = value.E3;
+        }
+    }
+    #endregion
 
-    //public static C_Matrix3X3 Transpose(C_Matrix3X3 a)
-    //{
-    //    return new(
-    //        a.GetRow(0),
-    //        a.GetRow(1),
-    //        a.GetRow(2)
-    //        );
-    //}
+    public C_M4X4(
+        float E00, float E01, float E02, float E03,
+        float E10, float E11, float E12, float E13,
+        float E20, float E21, float E22, float E23,
+        float E30, float E31, float E32, float E33)
+    {
+        this.E00 = E00; this.E01 = E01; 
+        this.E02 = E02; this.E03 = E03;
+        this.E10 = E10; this.E11 = E11;
+        this.E12 = E12; this.E13 = E13;
+        this.E20 = E20; this.E21 = E21;
+        this.E22 = E22; this.E23 = E23;
+        this.E30 = E30; this.E31 = E31;
+        this.E32 = E32; this.E33 = E33;
+    }
 
-    //#region Affine Transformation Matrices. 
+    public static C_M4X4 Transpose(C_M4X4 a)
+    {
+        C_M4X4 newM = C_M4X4.zero;
+        newM.C1 = a.R1;
+        newM.C2 = a.R2;
+        newM.C3 = a.R3;
+        newM.C4 = a.R4; 
+        return newM;
+    }
 
-    //#region Translation Matrix Functions. 
-    //public static C_M4X4 TranslationMatrixX(float x)
-    //{
-    //    return TranslationMatrix(x, 0, 0);
-    //}
+    public static C_M4X4 TranslationMatrixX(float x)
+    {
+        return TranslationMatrix(x, 0, 0);
+    }
 
-    //public static C_M4X4 TranslationMatrixY(float y)
-    //{
-    //    return TranslationMatrix(0, y, 0);
-    //}
+    public static C_M4X4 TranslationMatrixY(float y)
+    {
+        return TranslationMatrix(0, y, 0);
+    }
 
-    //public static C_M4X4 TranslationMatrixZ(float z)
-    //{
-    //    return TranslationMatrix(0, 0, z);
-    //}
+    public static C_M4X4 TranslationMatrixZ(float z)
+    {
+        return TranslationMatrix(0, 0, z);
+    }
 
-    //public static C_M4X4 TranslationMatrix(float x, float y, float z)
-    //{
-    //    return new C_M4X4(
-    //        new(1, 0, 0, 0),
-    //        new(0, 1, 0, 0),
-    //        new(0, 0, 1, 0),
-    //        new(x, y, z, 1)
-    //        );
-    //}
-    //#endregion
+    public static C_M4X4 TranslationMatrix(float x, float y, float z)
+    {
+        return new C_M4X4(
+            1, 0, 0, x,
+            0, 1, 0, y,
+            0, 0, 1, z,
+            0, 0, 0, 1
+            );
+    }
 
-    //#region Scale Matrix Functions.
-    //public static C_M4X4 GetScaleMatrixX(float x)
-    //{
-    //    return GetScaleMatrix(x, 1, 1);
-    //}
+    public static C_M4X4 GetScaleMatrixX(float x)
+    {
+        return ScaleMatrix(x, 0, 0);
+    }
 
-    //public static C_M4X4 GetScaleMatrixY(float y)
-    //{
-    //    return GetScaleMatrix(1, y, 1);
-    //}
+    public static C_M4X4 GetScaleMatrixY(float y)
+    {
+        return ScaleMatrix(0, y, 0);
+    }
 
-    //public static C_M4X4 GetScaleMatrixZ(float z)
-    //{
-    //    return GetScaleMatrix(1, 1, z);
-    //}
+    public static C_M4X4 GetScaleMatrixZ(float z)
+    {
+        return ScaleMatrix(0, 0, z);
+    }
 
-    //public static C_M4X4 GetScaleMatrix(float x, float y, float z)
-    //{
-    //    return new C_M4X4(
-    //        x * C_Seq4.SeqX,
-    //        y * C_Seq4.SeqY,
-    //        z * C_Seq4.SeqZ,
-    //        C_Seq4.SeqW
-    //        );
-    //}
-    //#endregion
+    public static C_M4X4 ScaleMatrix(float x, float y, float z)
+    {
+        return new C_M4X4(
+            x * 1, 0, 0, 0,
+            0, y * 1, 0, 0,
+            0, 0, z * 1, 0,
+            0, 0, 0, 1
+            );
+    }
 
-    //public static C_Matrix3X3 RotationMatrixX(float angle)
-    //{
-    //    float angleR = angle * Mathf.Deg2Rad;
+    public static C_M4X4 GetRotXMatrix(float orientation)
+    {
+        float angleR = orientation * Mathf.Deg2Rad;
+        float cosT = Mathf.Cos( angleR );
+        float sinT = Mathf.Sin( angleR );
 
-    //    return new(
-    //        new(Mathf.Cos(angleR), Mathf.Sin(angleR), 0),
-    //        new(-Mathf.Sin(angleR), Mathf.Cos(angleR), 0),
-    //        C_Seq3.SeqZ
-    //        );
-    //}
+        return new C_M4X4(
+            1,    0,     0, 0, 
+            0, cosT, -sinT, 0, 
+            0, sinT,  cosT, 0, 
+            0,    0,     0, 1
+            );
+    }
 
-    //public static C_Matrix3X3 RotationMatrixY(float angle)
-    //{
-    //    float angleR = angle * Mathf.Deg2Rad;
+    public static C_M4X4 GetRotYMatrix(float orientation)
+    {
+        float angleR = orientation * Mathf.Deg2Rad;
+        float cosT = Mathf.Cos(angleR);
+        float sinT = Mathf.Sin(angleR);
 
-    //    return new(
-    //        new(Mathf.Cos(angleR), Mathf.Sin(angleR), 0),
-    //        new(-Mathf.Sin(angleR), Mathf.Cos(angleR), 0),
-    //        C_Seq3.SeqZ
-    //        );
-    //}
+        return new C_M4X4(
+             cosT, 0, sinT, 0,
+                0, 1,    0, 0,
+            -sinT, 0, cosT, 0,
+                0, 0,    0, 0
+            );
+    }
 
-    //public static C_Matrix3X3 RotationMatrixZ(float angle)
-    //{
-    //    float angleR = angle * Mathf.Deg2Rad;
+    public static C_M4X4 GetRotZMatrix(float orientation)
+    {
+        float angleR = orientation * Mathf.Deg2Rad;
+        float cosT = Mathf.Cos(angleR);
+        float sinT = Mathf.Sin(angleR);
 
-    //    return new(
-    //        new(Mathf.Cos(angleR), Mathf.Sin(angleR), 0),
-    //        new(-Mathf.Sin(angleR), Mathf.Cos(angleR), 0),
-    //        C_Seq3.SeqZ
-    //        );
-    //}
+        return new C_M4X4(
+             cosT, -sinT, 0, 0,
+             sinT,  cosT, 0, 0,
+                0,     0, 0, 0,
+                0,     0, 0, 0
+            );
+    }
 
-    //public static C_Matrix3X3 RotationMatrix(
-    //float t1, float t2, float t3)
-    //{
-    //    //Calculate repeated values. 
-    //    float a = -MathF.Sin(t1) * MathF.Sin(t2);
-    //    float b = MathF.Sin(t1) * MathF.Sin(t3);
-    //    float c = MathF.Cos(t1) * MathF.Cos(t3);
+    public static implicit operator C_M4X4(C_M3X3 a)
+    {
+        return new C_M4X4(
+            a.E00, a.E01, a.E02, 0, 
+            a.E10, a.E11, a.E12, 0, 
+            a.E20, a.E21, a.E22, 0,
+                0,     0,     0, 0
+            );
+    }
 
-    //    /////////////
-    //    //Calculate individual elements. 
-    //    ////////////
+    public static C_M4X4 RotationMatrix(
+    float t1, float t2, float t3)
+    {
+        //Calculate repeated values. 
+        float a = -MathF.Sin(t1) * MathF.Sin(t2);
+        float b = MathF.Sin(t1) * MathF.Sin(t3);
+        float c = MathF.Cos(t1) * MathF.Cos(t3);
 
-    //    //X column. 
-    //    float x1 = MathF.Cos(t2) * MathF.Cos(t3);
-    //    float x2 = (a * MathF.Cos(t3)) + (MathF.Cos(t1) * MathF.Sin(t3));
-    //    float x3 = (c * MathF.Sin(t1)) + b;
+        /////////////
+        //Calculate individual elements. 
+        ////////////
 
-    //    //Y column.
-    //    float y1 = -MathF.Cos(t2) * MathF.Sin(t3);
-    //    float y2 = a + c;
-    //    float y3 = (-b * MathF.Cos(t1)) - b;
+        //X column. 
+        float x1 = MathF.Cos(t2) * MathF.Cos(t3);
+        float x2 = (a * MathF.Cos(t3)) + (MathF.Cos(t1) * MathF.Sin(t3));
+        float x3 = (c * MathF.Sin(t1)) + b;
 
-    //    //z Column.
-    //    float z1 = -MathF.Sin(t2);
-    //    float z2 = -MathF.Sin(t1) * MathF.Cos(t2);
-    //    float z3 = MathF.Cos(t1) * MathF.Cos(t2);
+        //Y column.
+        float y1 = -MathF.Cos(t2) * MathF.Sin(t3);
+        float y2 = a + c;
+        float y3 = (-b * MathF.Cos(t1)) - b;
 
-    //    return new(new(x1, x2, x3), new(y1, y2, y3), new(z1, z2, z3));
-    //}
+        //z Column.
+        float z1 = -MathF.Sin(t2);
+        float z2 = -MathF.Sin(t1) * MathF.Cos(t2);
+        float z3 = MathF.Cos(t1) * MathF.Cos(t2);
 
-    //public static C_Matrix3X3 RotationMatrix(float angle)
-    //{
-    //    float angleR = angle * Mathf.Deg2Rad;
+        /////////////
+        //Set and return matrix. 
+        ////////////
 
-    //    return new(
-    //        new(Mathf.Cos(angleR), Mathf.Sin(angleR), 0),
-    //        new(-Mathf.Sin(angleR), Mathf.Cos(angleR), 0),
-    //        C_Seq3.SeqZ
-    //        );
-    //}
+        return new C_M4X4(
+            x1, x2, x3, 0,
+            y1, y2, y3, 0, 
+            z1, z2, z3, 0, 
+             0,  0,  0, 0
+            );
+    }
 
-    //public static C_Matrix3X3 ReflectionMatrix(int signX, int signY)
-    //{
-    //    return new(
-    //        new(signX * 1, 0, 0),
-    //        new(0, signY * 1, 0),
-    //        new(0, 0, 1)
-    //        );
-    //}
+    public static C_M4X4 ReflectionMatrix(float signX, float signY, float signZ)
+    {
+        return new(
+            signX, 0, 0, 0,
+            0, signY, 0, 0, 
+            0, 0, signZ, 0,
+            0, 0, 0, 1
+            );
+    }
 
-    //public static C_Matrix3X3 ShearMatrix(float shearX, float shearY)
-    //{
-    //    return new(
-    //        new(1, shearY, 0),
-    //        new(shearX, 1, 0),
-    //        C_Seq3.SeqZ
-    //        );
-    //}
-
-    //#endregion
-
-    //#region Accessor Functions. 
-
-    //public float GetElement(int row, int column)
-    //{
-    //    switch (column)
-    //    {
-    //        case 0:
-    //            return _C0.GetElement(row);
-    //        case 1:
-    //            return _C1.GetElement(row);
-    //        case 2:
-    //            return C2.GetElement(row);
-    //        case 3:
-    //            return _C3.GetElement(row);
-    //        default:
-    //            Debug.Break();
-    //            return float.NaN;
-    //    }
-    //}
-
-    //#endregion
-
-
+    ///TODO: TEST THIS FUNCTION CAUSE IT LOOKS DODGEY ASF. 
+    public static C_M4X4 ShearMatrix(float shearX, float shearY)
+    {
+        return new(
+            1, shearY, 0, 0, 
+            shearX, 0, 0, 0, 
+            0, 0, 0, 0, 
+            0, 0, 0, 1
+            );
+    }
 }

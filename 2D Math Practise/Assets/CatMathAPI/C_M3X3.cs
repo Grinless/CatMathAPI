@@ -10,7 +10,10 @@ public struct C_M3X3
     public float E20, E21, E22;
 
     #region Shorthand Refs. 
-    private static C_M2X2 identity = new C_M2X2(1, 0, 1, 0);
+    private static C_M2X2 identity = new C_M2X2(
+        1, 0, 
+        0, 1
+        );
     private static C_M2X2 zero = new C_M2X2(0, 0, 0, 0);
     public static C_M2X2 Identity => identity;
     public static C_M2X2 Zero => zero;
