@@ -9,89 +9,64 @@ using UnityEngine;
 public struct Factorial
 {
     public int n;
-    public int r;
 
     public Factorial(int n)
     {
         this.n = n;
-        r = 0; 
     }
 
-    public Factorial(int n, int r)
-    {
-        this.n = n;
-        this.r = r;
-    }
-    public int[] Expand(int _n, int _r)
-    {
-        int[] values = new int[_n];
+    public int[] Expansion => Expand(); 
 
-        for (int i = 0; i < _n - r; i++)
-            values[i] = _n - i;
+    public int Value => Multiply(Expansion);
+
+    private int[] Expand(int value)
+    {
+        int[] values = new int[n];
+
+        for (int i = 0; i < n; i++)
+            values[i] = n - i;
 
         return values;
     }
 
-    public int Multiply()
+    private int[] Expand()
     {
-        int output = n;
-        int[] factorialExpansion = Expand(n, 0);
-        Debug.Log("Output Init: " + output);
+        int[] values = new int[n];
 
-        for (int i = 1; i < factorialExpansion.Length; i++)
-            output *= factorialExpansion[i];
+        for (int i = 0; i < n; i++)
+            values[i] = n - i;
+
+        return values;
+    }
+
+    private int Multiply(int[] factors)
+    {
+        int output = factors[0];
+
+        for (int i = 1; i < factors.Length; i++)
+            output *= factors[i];
         return output;
     }
 
-    public int MultiplyWithR()
+    public int NFacR(Factorial factorial)
     {
-        int output = n;
-        int[] factorialExpansion = Expand(n, r);
-        Debug.Log("Output Init: " + output);
+        return Multiply(Expand(n - factorial.n));
+    }
 
-        for (int i = 1; i < factorialExpansion.Length; i++)
-            output *= factorialExpansion[i];
+    public string GetString()
+    {
+        string output =
+            "Factor N: " + n + ", Factorial N: " + Value + "\n" +
+            "Expansion N: \n";
+
+        int[] expansionN = Expand();
+
+        for (int i = 0; i < expansionN.Length; i++)
+        {
+            output += "(I: " + i + ", Coeff: " + expansionN[i] + ") \n";
+        }
+
         return output;
-    }
-}
-
-public struct C_Permutations
-{
-    public Factorial n;
-
-    public C_Permutations(int n, int r)
-    {
-        this.n = new Factorial(n, r);
-    }
-
-    public int GetPermutations()
-    {
-        int numerator = n.Multiply();
-        int denomenator = n.MultiplyWithR();
-        if (denomenator == 0)
-            return 0; 
-        return numerator / denomenator;
-    }
-}
-
-public struct C_Combinatorial
-{
-    public Factorial n;
-    public Factorial r;
-
-    public C_Combinatorial(int n, int r)
-    {
-        this.n = new Factorial(n);
-        this.r = new Factorial(r);
-    }
-
-    public int GetPermutations()
-    {
-        int numerator = n.Multiply();
-        int denomenator = n.MultiplyWithR();
-        if (denomenator == 0)
-            return 0;
-        return numerator / (denomenator) * r.Multiply();
     }
 }
 

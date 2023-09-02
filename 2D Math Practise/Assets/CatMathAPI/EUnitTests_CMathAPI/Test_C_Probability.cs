@@ -1,18 +1,28 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Drawing.Drawing2D;
+using System.Security.Cryptography;
 using JetBrains.Annotations;
 using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.TestTools;
 
-public class Test_Permutations
+public class Test_Factorial
 {
     [Test]
-    public void Test_Permutations_Calculation()
+    public void Test_FactorialExpansion()
     {
-        C_Permutations p = new C_Permutations(5, 2);
-        p.GetPermutations();
+        Factorial fac = new Factorial(5);
+        int[] facExpansion = fac.Expansion;
+        Debug.Log(fac.GetString());
+    }
+
+    [Test]
+    public void Test_FactorialMultiplication()
+    {
+        Factorial fac = new Factorial(5);
+        int value = fac.Value;
+        Debug.Log(value);
     }
 }
 
