@@ -6,6 +6,16 @@ using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.TestTools;
 
+public class Test_Permutations
+{
+    [Test]
+    public void Test_Permutations_Calculation()
+    {
+        C_Permutations p = new C_Permutations(5, 2);
+        p.GetPermutations();
+    }
+}
+
 public class Test_C_Probability
 {
     [Test]
@@ -58,5 +68,25 @@ public class Test_C_Probability
         //            ", Converted: " + conversion.ToString() +
         //            ", Expected: " + expected.ToString() + "\n";
         //}
+    }
+
+    [Test]
+    public void Test_C_Probability_AUB()
+    {
+        double ace =
+            C_Probability.ConvertToProbability(
+                4,
+                new C_Seq2(0, 52)
+                );
+
+        double aceDrawn = C_Probability.ConvertToProbability(
+                3,
+                new C_Seq2(0, 51)
+                );
+
+        Assert.AreEqual(
+            0.0045248868778280547, 
+            C_Probability.AUB_Dependant(ace, aceDrawn)
+            );
     }
 }

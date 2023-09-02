@@ -8,15 +8,25 @@ using Unity.VisualScripting;
 
 public static class C_Math
 {
-    public const double E = 2.7182818284590451;
-    public const double PI = 3.1415926535897931;
-    public const double Rad2Deg = 180/PI;
-    public const double Deg2Rad = PI/180;
+    public const double E = 2.7182818284590451D;
+    public const double PI = 3.1415926535897931D;
+    public const double Rad2Deg = 180F/PI;
+    public const double Deg2Rad = PI/180F;
 
+    /// <summary>
+    /// Limit a value to the passed maximum.
+    /// </summary>
+    /// <param name="a"> The value to limit. </param>
+    /// <param name="max"> The maximum that value can be.</param>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static float Max(float a, float max) => 
         (a > max) ? max : a;
 
+    /// <summary>
+    /// Limit a value above a minimum threshold. 
+    /// </summary>
+    /// <param name="a"> The value to limit. </param>
+    /// <param name="min"> The minimum vaue threshold. </param>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static float Min(float a, float min) => 
         (a < min) ? min : a;
@@ -33,6 +43,7 @@ public static class C_Math
     public static float Abs(float a) => 
         ((a < 0) ? -1 : 1) * a;
 
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static float Clamp(float value, float min, float max) =>
         (value < min) ? min : (value > max) ? max : value;
 
@@ -47,12 +58,10 @@ public static class C_Math
     /// <param name="initalRange"></param>
     /// <param name="newRange"></param>
     /// <returns>value converted to the Range B scale. </returns>
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static double ConvertToRange(float value, C_Seq2 initalRange, C_Seq2 newRange)
     {
-        float numerator = value - initalRange.E0;
-        float denominator = initalRange.E1 - initalRange.E0;
-        float multiplier = (newRange.E1 - newRange.E0); 
-
-        return (numerator / denominator) * multiplier;
+        return 
+            ((value - initalRange.E0) / (initalRange.E1 - initalRange.E0)) * (newRange.E1 - newRange.E0);
     }
 }
