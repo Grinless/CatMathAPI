@@ -51,13 +51,18 @@
         return hash;
     }
 
+    public override string ToString()
+    {
+        return "[ " + E0 + ", " + E1.ToString() + ", " + E2.ToString() + "]";
+    }
+
     public static bool operator ==(C_Seq3 a, C_Seq3 b)
     {
-        return a.Equals(b);
+        return (a.E0 == b.E0 && a.E1 == b.E1 && a.E2 == b.E2);
     }
 
     public static bool operator !=(C_Seq3 a, C_Seq3 b)
     {
-        return a.Equals(b);
+        return !(a == b);
     }
 }

@@ -412,6 +412,8 @@ public struct C_M3X3
             R3 == objInst.R3);
     }
 
+    //TODO: Fix row and column access Properties. 
+
     public override int GetHashCode()
     {
         int hash = 17;
@@ -426,11 +428,21 @@ public struct C_M3X3
 
     public static bool operator ==(C_M3X3 x, C_M3X3 y)
     {
-        return x.Equals(y);
+        return (
+            x.E00 == y.E00 &&
+            x.E01 == y.E01 &&
+            x.E02 == y.E02 &&
+            x.E10 == y.E10 &&
+            x.E11 == y.E11 &&
+            x.E12 == y.E12 &&
+            x.E20 == y.E20 &&
+            x.E21 == y.E21 &&
+            x.E22 == y.E22 
+            );
     }
 
     public static bool operator !=(C_M3X3 x, C_M3X3 y)
     {
-        return !x.Equals(y);
+        return !(x == y);
     }
 }

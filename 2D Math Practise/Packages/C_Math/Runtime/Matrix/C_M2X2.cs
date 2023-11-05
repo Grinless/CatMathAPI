@@ -120,8 +120,8 @@ public struct C_M2X2
     /// Returns the Adjoint C_M2X2. 
     /// </summary>
     public C_M2X2 Adjoint => new C_M2X2(
-             E11, -E10,
-            -E01, E00
+             E11, -E01,
+            -E10, E00
             );
 
     #endregion
@@ -190,7 +190,7 @@ public struct C_M2X2
         if (det == 0)
             return C_M2X2.Zero;
 
-        //Calculate the inverse matric and return. 
+        //Calculate the inverse matrix and return. 
         return (1 / det) * copy.Adjoint;
 
     }
@@ -223,10 +223,8 @@ public struct C_M2X2
     /// <returns> String formatted copy of the matrix. </returns>
     public override string ToString()
     {
-        string str1 = "[{0} {1}] \n";
-        string str2 = "[{0} {1}]";
-        return string.Format(str1, E00, E01) +
-               string.Format(str2, E10, E11) + "\n";
+        return "[" + E00 + ", " + E01 + "] \n" 
+             + "[" + E10 + ", " + E11 + "]";
     }
 
     public override bool Equals(object obj)
@@ -350,7 +348,7 @@ public struct C_M2X2
 
     public static bool operator ==(C_M2X2 x, C_M2X2 y)
     {
-        return x.Equals(y);
+        return (x.C1 == y.C1 && x.C2 == y.C2);
     }
 
     public static bool operator !=(C_M2X2 x, C_M2X2 y)
