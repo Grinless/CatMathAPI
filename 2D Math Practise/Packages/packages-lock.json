@@ -1,12 +1,10 @@
 {
   "dependencies": {
-    "com.c_ater.cmath": {
+    "com.c_ater.c_math": {
       "version": "file:C_Math",
       "depth": 0,
       "source": "embedded",
-      "dependencies": {
-        "com.unity.mathematics": ""
-      }
+      "dependencies": {}
     },
     "com.unity.2d.animation": {
       "version": "9.0.3",

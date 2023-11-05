@@ -41,42 +41,42 @@ public partial struct C_V2
     /// <summary>
     /// Shorthand for new Vec2(1f, 1f). 
     /// </summary>
-    public static Vector2 One => one;
+    public static C_V2 One => one;
     
     /// <summary>
     /// Shorthand for new Vec2(0f, 0f). 
     /// </summary>
-    public static Vector2 Zero => zero;
+    public static C_V2 Zero => zero;
     
     /// <summary>
     /// Shorthand for new Vec2(0f, 1f). 
     /// </summary>
-    public static Vector2 Up => up;
+    public static C_V2 Up => up;
     
     /// <summary>
     /// Shorthand for new Vec2(0f, -1f). 
     /// </summary>
-    public static Vector2 Down => down;
+    public static C_V2 Down => down;
     
     /// <summary>
     /// Shorthand for new Vec2(-1f, 0f). 
     /// </summary>
-    public static Vector2 Left => left;
+    public static C_V2 Left => left;
     
     /// <summary>
     /// Shorthand for new Vec2(1f, 0f). 
     /// </summary>
-    public static Vector2 Right => right;
+    public static C_V2 Right => right;
     
     /// <summary>
     /// Shorthand for new Vec2(float.PositiveInfinity, float.PositiveInfinity). 
     /// </summary>
-    public static Vector2 PositiveInfinity => pos_inf;
+    public static C_V2 PositiveInfinity => pos_inf;
     
     /// <summary>
     /// Shorthand for new Vec2(float.NegativeInfinity, float.NegativeInfinity). 
     /// </summary>
-    public static Vector2 NegativeInfinity => neg_inf;
+    public static C_V2 NegativeInfinity => neg_inf;
     
     /// <summary>
     /// Returns the square magnitude of the vector for quick comparisons. 
@@ -152,8 +152,8 @@ public partial struct C_V2
     /// <returns> C_Vec2. </returns>
     public static C_V2 Min(C_V2 rhs, C_V2 lhs) =>
         new C_V2(
-            C_MathF.Lesser(rhs.x, lhs.x),
-            C_MathF.Lesser(rhs.y, lhs.y)
+            (rhs.x <= lhs.x) ? rhs.x : lhs.x,
+            (rhs.y <= lhs.y) ? rhs.y : lhs.y
             );
 
     /// <summary>
@@ -162,7 +162,10 @@ public partial struct C_V2
     /// <param name="lhs"> The first C_Vec2. </param>
     /// <param name="rhs"> The second C_Vec2. </param>
     public static C_V2 Max(C_V2 lhs, C_V2 rhs) =>
-        new C_V2(C_MathF.Greater(lhs.x, rhs.x), C_MathF.Greater(lhs.y, rhs.y));
+        new C_V2(
+            (rhs.x >= lhs.x) ? rhs.x : lhs.x,
+            (rhs.y >= lhs.y) ? rhs.y : lhs.y
+            );
 
     /// <summary>
     /// Returns a C_Vec2 where the orignal component values are clamped to the provided range. 
@@ -279,7 +282,7 @@ public partial struct C_V2
 
     public static C_V2 operator *(C_V2 lhs, C_V2 rhs) => new C_V2(lhs.x * rhs.x, lhs.y * rhs.y);
     
-    public static implicit operator Vector3(C_V2 vec) => new Vector3(vec.x, vec.y, 0);
+    public static explicit operator Vector3(C_V2 vec) => new Vector3(vec.x, vec.y, 0);
     
-    public static implicit operator Vector2(C_V2 vec) => new Vector2(vec.x, vec.y);
+    public static explicit operator Vector2(C_V2 vec) => new Vector2(vec.x, vec.y);
 }

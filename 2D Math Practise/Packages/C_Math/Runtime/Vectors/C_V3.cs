@@ -147,9 +147,9 @@ public struct C_V3
     /// <param name="b"> The second vector. </param>
     public static C_V3 Min(C_V3 a, C_V3 b) =>
         new(
-            C_MathF.Lesser(a.x, b.x),
-            C_MathF.Lesser(a.y, b.y),
-            C_MathF.Lesser(a.z, b.z)
+            (a.x <= b.x) ? a.x : b.x,
+            (a.y <= b.y) ? a.y : b.y,
+            (a.z <= b.z) ? a.z : b.z
             );
 
     /// <summary>
@@ -160,9 +160,9 @@ public struct C_V3
     /// <returns></returns>
     public static C_V3 Max(C_V3 a, C_V3 b) =>
         new(
-            C_MathF.Greater(a.x, b.x),
-            C_MathF.Greater(a.y, b.y),
-            C_MathF.Greater(a.z, b.z)
+            (a.x >= b.x) ? a.x : b.x,
+            (a.y >= b.y) ? a.y : b.y,
+            (a.z >= b.z) ? a.z : b.z
             );
 
     /// <summary>
