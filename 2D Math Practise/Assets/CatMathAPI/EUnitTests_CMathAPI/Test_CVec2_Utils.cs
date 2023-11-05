@@ -143,12 +143,12 @@ public class Test_CVec2_Funcs
     {
         ///RHS negative. 
         C_V2 c1 = new C_V2(-1.0F, 0.0F);
-        c1.Normalize();
+        c1.Unitize();
         float denom = Mathf.Sqrt((-1) * (-1) + 0 * 0);
         Assert.AreEqual(new C_V2(-1.0F / denom, 0.0F / denom) , c1);
 
         c1 = new C_V2(-0.5F, 0.5F);
-        c1.Normalize();
+        c1.Unitize();
         denom = Mathf.Sqrt((-0.5F) * (-0.5F) + 0.5F * 0.5F);
         Assert.AreEqual(new C_V2(-0.5F / denom, 0.5F / denom) , c1);
     }
@@ -220,8 +220,8 @@ public class Test_CVec2_Funcs
         b = new C_V2(0.0F, -1.0F);
         Assert.AreEqual(Mathf.Acos(0.0F), C_V2.AngleBetween(a, b));
 
-        a = new C_V2(2.5F, 2.5F).Normalized;
-        b = new C_V2(1.0F, 0.0F).Normalized;
+        a = new C_V2(2.5F, 2.5F).Unitized;
+        b = new C_V2(1.0F, 0.0F).Unitized;
         Assert.AreEqual(0.707106769F, C_V2.DotProduct(a, b));
     }
 
@@ -404,12 +404,12 @@ public partial class Test_CVec2_Utils
     public void Test_C_Vec2_Prop_Normalized()
     {
         ///RHS negative. 
-        C_V2 c1 = new C_V2(-1.0F, 0.0F).Normalized;
+        C_V2 c1 = new C_V2(-1.0F, 0.0F).Unitized;
         float denom = Mathf.Sqrt((-1) * (-1) + 0 * 0);
         Assert.AreEqual(-1.0F / denom, c1.x);
         Assert.AreEqual(0.0F / denom, c1.y);
 
-        c1 = new C_V2(-0.5F, 0.5F).Normalized;
+        c1 = new C_V2(-0.5F, 0.5F).Unitized;
         denom = Mathf.Sqrt((-0.5F) * (-0.5F) + 0.5F * 0.5F);
         Assert.AreEqual(-0.5F / denom, c1.x);
         Assert.AreEqual(0.5F / denom, c1.y);

@@ -22,7 +22,7 @@ public class Test_C_Seq3
     }
 
     [Test]
-    public void Test_C_Seq2Creation()
+    public void Test_C_Seq3Creation()
     {
         //Test the setup initalization. 
         Assert.AreEqual(1.0F, instA.E0);
@@ -43,51 +43,48 @@ public class Test_C_Seq3
     }
 
     [Test]
-    public void Test_C_Seq2Shorthand_Zero()
+    public void Test_C_Seq3Shorthand_Zero()
     {
         //Test that shorthand references are as expected. 
         Assert.AreEqual(new C_Seq3(0, 0, 0), C_Seq3.Zero);
     }
 
     [Test]
-    public void Test_C_Seq2Shorthand_SeqX()
+    public void Test_C_Seq3Shorthand_SeqX()
     {
         //Test that shorthand references are as expected. 
         Assert.AreEqual(new C_Seq3(1, 0, 0), C_Seq3.SeqX);
     }
 
     [Test]
-    public void Test_C_Seq2Shorthand_SeqY()
+    public void Test_C_Seq3Shorthand_SeqY()
     {
         //Test that shorthand references are as expected. 
         Assert.AreEqual(new C_Seq3(0, 1, 0), C_Seq3.SeqY);
     }
 
     [Test]
-    public void Test_C_Seq2Shorthand_SeqZ()
+    public void Test_C_Seq3Shorthand_SeqZ()
     {
         //Test that shorthand references are as expected. 
         Assert.AreEqual(new C_Seq3(0, 0, 1), C_Seq3.SeqZ);
     }
 
     [Test]
-    public void Test_C_Seq2GetElement()
+    public void Test_CSeq3_Equality()
     {
-        //Test the setup initalization. 
-        Assert.AreEqual(1.0F, instA.GetElement(0));
-        Assert.AreEqual(2.0F, instA.GetElement(1));
-        Assert.AreEqual(5.0F, instA.GetElement(2));
-        Assert.AreNotEqual(2.0F, instA.GetElement(2));
-        Assert.AreNotEqual(1.0F, instA.GetElement(1));
-        Assert.AreNotEqual(5.0F, instA.GetElement(0));
+        C_Seq3 a = new C_Seq3(1, 2, 3);
+        C_Seq3 b = new C_Seq3(1, 2, 3);
 
-        //Reinitalise & re-test.
-        instA = new C_Seq3(3.0F, 4.0F, 8.0F);
-        Assert.AreEqual(3.0F, instA.GetElement(0));
-        Assert.AreEqual(4.0F, instA.GetElement(1));
-        Assert.AreEqual(8.0F, instA.GetElement(2));
-        Assert.AreNotEqual(4.0F, instA.GetElement(2));
-        Assert.AreNotEqual(3.0F, instA.GetElement(1));
-        Assert.AreNotEqual(8.0F, instA.GetElement(0));
+        Assert.AreEqual(a, b);
+    }
+
+    [Test]
+    public void Test_CSeq3_Inequality()
+    {
+        C_Seq3 a = new C_Seq3(1, 2, 3);
+        C_Seq3 b = new C_Seq3(2, 2, 2);
+
+        Assert.AreNotEqual(a, b);
     }
 }

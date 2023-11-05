@@ -23,8 +23,8 @@ public class DotProductTester : MonoBehaviour
         get => new C_Point2D(transB.position.x, transB.position.y);
     }
 
-    public C_V2 FWDVecA => APosition + facingDirA.Normalized;
-    public C_V2 FWDVecB => BPosition + facingDirB.Normalized;
+    public C_V2 FWDVecA => APosition + facingDirA.Unitized;
+    public C_V2 FWDVecB => BPosition + facingDirB.Unitized;
 
     private void Start()
     {
@@ -32,8 +32,8 @@ public class DotProductTester : MonoBehaviour
         C_Point2D b = new C_Point2D(0, 1); 
         C_V2 AB = (b - a);
         C_V2 FWDB = new C_V2(0, -1);
-        FWDB.Normalize();
-        AB.Normalize();
+        FWDB.Unitize();
+        AB.Unitize();
         Debug.Log("CM: Dot Prod: " + C_V2.DotProduct(AB, FWDB));
         Debug.Log("MF: Dot Prod: " + Vector2.Dot(AB, FWDB));
     }
@@ -66,7 +66,7 @@ public class DotProductTester : MonoBehaviour
 
         void DebugFwrdVec(C_Point2D pos, C_V2 direction, Color color)
         {
-            Debug.DrawLine(pos, pos + direction.Normalized, color);
+            Debug.DrawLine(pos, pos + direction.Unitized, color);
         }
     }
     #endregion

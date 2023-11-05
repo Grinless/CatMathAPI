@@ -4,6 +4,7 @@ using System.Drawing.Drawing2D;
 using System.Security.Cryptography;
 using JetBrains.Annotations;
 using NUnit.Framework;
+using UnityEditor.VersionControl;
 using UnityEngine;
 using UnityEngine.TestTools;
 
@@ -15,6 +16,16 @@ public class Test_Factorial
         Factorial fac = new Factorial(5);
         int[] facExpansion = fac.Expansion;
         Debug.Log(fac.GetString());
+        int[] expected = new int[]
+        {
+            5,
+            4,
+            3,
+            2,
+            1
+        };
+
+        NUnit.Framework.Assert.AreEqual(expected, facExpansion);
     }
 
     [Test]
@@ -23,6 +34,7 @@ public class Test_Factorial
         Factorial fac = new Factorial(5);
         int value = fac.Value;
         Debug.Log(value);
+        Assert.AreEqual(120, value);
     }
 }
 
