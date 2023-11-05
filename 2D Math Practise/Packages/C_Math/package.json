@@ -1,0 +1,21 @@
+{
+  "name": "com.c_ater.cmath",
+  "version": "1.0.1",
+  "displayName": "C_Math",
+  "description": "This package adds the C_Math library to a package.\nContains functionality for handling: \n-Vectors\n-Matrices\n-Collisions\n-Sequences\n\nUntested:\n-Probability\n-GaussJordan Solvers",
+  "unity": "2022.3",
+  "unityRelease": "4f1",
+  "keywords": [
+    "Math",
+    "Vectors",
+    "Matrix"
+  ],
+  "author": {
+    "name": "C.Ater",
+    "email": "cAter92@gmail.com"
+  },
+  "type": "module",
+  "dependencies": {
+    "com.unity.mathematics": ""
+  }
+}
