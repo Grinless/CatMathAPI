@@ -112,5 +112,15 @@ namespace C_Math
         {
             return C_M2X2.Rot90CC * v;
         }
+
+        public static float GetLineMidpoint(C_P2D a, C_P2D b)
+        {
+            return ((C_V2)(b - a)).Magnitude / 2; 
+        }
+
+        public static float GetLineMidpoint(C_V2 vec)
+        {
+            return vec.Magnitude / 2;
+        }
     }
 }

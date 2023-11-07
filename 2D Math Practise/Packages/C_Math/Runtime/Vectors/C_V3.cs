@@ -10,7 +10,7 @@ public struct C_V3
 {
     public const float POS_INF = float.PositiveInfinity;
     public const float NEG_INFI = float.NegativeInfinity;
-    public const float K_EPSILON = 1E-05f;
+    public const float K_EPSILON = 1E-08f;
     public const float K_EPSILON_NORMAL_SQRT = 1E-15f;
     public float x;
     public float y;
@@ -230,8 +230,18 @@ public struct C_V3
 
     #endregion
 
-    public static float AngleBetween(C_V3 vec1, C_V3 vec2) =>
-        Mathf.Acos(NormDotProduct(vec1, vec2));
+    public static float AngleBetween(C_V3 vec1, C_V3 vec2)
+    {
+        float dotProd = DotProduct(vec1, vec2);
+        float magA = vec1.Magnitude; 
+        float magB = vec2.Magnitude;
+        float numerator = dotProd;
+        float denominator = magA * magB;
+        float result = numerator / denominator;
+        if(denominator == 0 || numerator > K_EPSILON) { return 0; }
+
+        return (float)(Mathf.Acos(result) * C_MathF.Rad2Deg);
+    }
 
     public static C_V3 Distance(C_Point3D a, C_Point3D b) =>
         new(b.x - a.x, b.y - a.y, b.z - a.y);

@@ -148,29 +148,58 @@ public class Test_CVec2_Funcs
     }
 
     [Test]
-    public void Test_C_Vec2_AngleBetween()
+    public void Test_C_Vec2_AngleBetweenRad()
     {
         C_V2 a = new C_V2(0.0F, -1.0F);
         C_V2 b = new C_V2(0.0F, 1.0F);
-        Assert.AreEqual(Mathf.Acos(-1), C_V2.AngleBetween(a, b));
+        Assert.AreEqual(Mathf.Acos(-1), C_V2.AngleBetweenRad(a, b));
 
         a = new C_V2(0.0F, 1.0F);
         b = new C_V2(0.0F, 1.0F);
-        Assert.AreEqual(Mathf.Acos(1), C_V2.AngleBetween(a, b));
+        Assert.AreEqual(Mathf.Acos(1), C_V2.AngleBetweenRad(a, b));
 
         a = new C_V2(1.0F, 0.0F);
         b = new C_V2(0.0F, 1.0F);
-        Assert.AreEqual(Mathf.Acos(0.0F), C_V2.AngleBetween(a, b));
+        Assert.AreEqual(Mathf.Acos(0.0F), C_V2.AngleBetweenRad(a, b));
 
         a = new C_V2(-1.0F, 0.0F);
         b = new C_V2(0.0F, -1.0F);
-        Assert.AreEqual(Mathf.Acos(0.0F), C_V2.AngleBetween(a, b));
+        Assert.AreEqual(Mathf.Acos(0.0F), C_V2.AngleBetweenRad(a, b));
 
         a = new C_V2(2.5F, 2.5F).Unitized;
         b = new C_V2(1.0F, 0.0F).Unitized;
         Assert.AreEqual(0.707106769F, C_V2.DotProduct(a, b));
     }
 
+    [Test]
+    public void Test_C_Vec2_AngleBetweenDeg()
+    {
+        C_V2 a = new C_V2(0.0F, -1.0F);
+        C_V2 b = new C_V2(0.0F, 1.0F);
+        Assert.AreEqual(180.0F, C_V2.AngleBetweenDeg(a, b), "Test A");
+
+        a = new C_V2(0.0F, 1.0F);
+        b = new C_V2(0.0F, 1.0F);
+        Assert.AreEqual(0.0F, C_V2.AngleBetweenDeg(a, b), "Test B");
+
+        a = new C_V2(1.0F, 0.0F);
+        b = new C_V2(0.0F, 1.0F);
+        Assert.AreEqual(90.0F, C_V2.AngleBetweenDeg(a, b), "Test C");
+
+        a = new C_V2(-1.0F, 0.0F);
+        b = new C_V2(0.0F, -1.0F);
+        Assert.AreEqual(90.0F, C_V2.AngleBetweenDeg(a, b), "Test D");
+
+        a = new C_V2(-1.0F, 0.0F);
+        b = new C_V2(1.0F, 0.0F);
+        Assert.AreEqual(180.0F, C_V2.AngleBetweenDeg(a, b), "Test D");
+
+        a = new C_V2(0.0F, -1.0F);
+        b = new C_V2(0.0F, 1.0F);
+        Assert.AreEqual(180.0F, C_V2.AngleBetweenDeg(a, b), "Test D");
+    }
+
+    [Test]
     public void Test_C_Vec2_CrossProduct()
     {
         C_V2 a = new C_V2(4, 3);
@@ -186,5 +215,16 @@ public class Test_CVec2_Funcs
         aCrossB = a.x * b.y + a.y * b.x;
 
         Assert.AreEqual(aCrossB, C_V2.CrossProduct(a, b));
+    }
+
+    //TODO: Expand this test and split into two tests. 
+    [Test]
+    public void Test_C_Vec2_VectorProjection()
+    {
+        C_V2 a = new C_V2(4, 3);
+        C_V2 b = new C_V2(12, 9);
+
+        Assert.AreEqual(new C_V2(4, 3), C_V2.ProjectionAB(a, b));
+        Assert.AreEqual(5, C_V2.ProjectionABMagnitude(a, b));
     }
 }

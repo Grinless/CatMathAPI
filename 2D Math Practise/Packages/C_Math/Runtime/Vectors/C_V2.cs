@@ -1,4 +1,5 @@
 using C_Math;
+using PlasticGui.WorkspaceWindow.Diff;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -87,7 +88,17 @@ public partial struct C_V2
     /// Returns the magnitude of the vector (a = SQRT(x * x + y * y).
     /// </summary>
     public readonly float Magnitude => Mathf.Sqrt(FastMagnitude);
-    
+
+    /// <summary>
+    /// Returns the magnitude of the vector (a = SQRT(x * x + y * y) halved.
+    /// </summary>
+    public readonly float HalfMagnitude => Mathf.Sqrt(FastMagnitude)/2;
+
+    /// <summary>
+    /// Returns a vector half the length of the inital vector. 
+    /// </summary>
+    public readonly C_V2 MidpointVec => HalfMagnitude * Unitized;
+
     /// <summary>
     /// Returns this vector with a magnitude of one.  
     /// </summary>
@@ -116,25 +127,18 @@ public partial struct C_V2
         this.y = y;
     }
 
-    /// <summary>
-    /// Get the angle between lhs and rhs. 
-    /// </summary>
-    /// <returns> float angle in radians. </returns>
-    public static float AngleBetween(C_V2 lhs, C_V2 rhs) =>
-        Mathf.Acos(NormDotProduct(lhs, rhs));
+    ////TODO: Create Unit Test for LerpUnclamped. 
 
-    //TODO: Create Unit Test for LerpUnclamped. 
-
-    /// <summary>
-    /// Interpolate a C_Vec2 Based on time. 
-    /// </summary>
-    /// <param name="initalPosition"> is the inital position to move from. </param>
-    /// <param name="Direction"> is the direction to move in. </param>
-    /// <param name="time"> The time multiplier that the vector is scaled by. </param>
-    /// <returns> Interpolated C_Vec2. </returns>
-    public static C_V2 LerpUnclamped(C_Point2D initalPosition, C_V2 Direction, float time) =>
-        new(initalPosition.x + (Direction.x - initalPosition.x) * time,
-            initalPosition.y + (Direction.y - initalPosition.y) * time);
+    ///// <summary>
+    ///// Interpolate a C_Vec2 Based on time. 
+    ///// </summary>
+    ///// <param name="initalPosition"> is the inital position to move from. </param>
+    ///// <param name="Direction"> is the direction to move in. </param>
+    ///// <param name="time"> The time multiplier that the vector is scaled by. </param>
+    ///// <returns> Interpolated C_Vec2. </returns>
+    //public static C_V2 LerpUnclamped(C_Point2D initalPosition, C_V2 Direction, float time) =>
+    //    new(initalPosition.x + (Direction.x - initalPosition.x) * time,
+    //        initalPosition.y + (Direction.y - initalPosition.y) * time);
 
     /// <summary>
     /// Copy the component values from vector a to vector b. 
@@ -227,17 +231,103 @@ public partial struct C_V2
     public static float CrossProduct(C_V2 lhs, C_V2 rhs) =>
         lhs.x * rhs.y - lhs.y * rhs.x;
 
-    public static C_V2 ProjectionAB(C_V2 A, C_V2 B) => 
-        DotProduct(A, B) / (B.Magnitude * B.Magnitude) * B;
-
-    //TODO: Create Unit Test for Vector Decompose. 
-    public static void VectorDecompose(C_V2 A, C_V2 B, out C_V2 projAB, out C_V2 AMinusProjAB)
+    /// <summary>
+    /// Returns the orthogonal projection of A onto B. 
+    /// </summary>
+    /// <param name="A"> The vector to project. </param>
+    /// <param name="B"> The vector projected onto. </param>
+    /// <returns> The vector projection of A onto B as a C_Vec2. </returns>
+    public static C_V2 ProjectionAB(C_V2 A, C_V2 B)
     {
-        C_V2 _pAB = ProjectionAB(A, B);
-        projAB = _pAB;
-        AMinusProjAB = A - _pAB; 
+        float numerator = DotProduct(A, B); 
+        float denominator = (B.Magnitude * B.Magnitude);
+        return (numerator / denominator) * B;
     }
 
+    /// <summary>
+    /// Returns the magnitude of the projection of A onto B.
+    /// </summary>
+    /// <param name="A"> The vector to project. </param>
+    /// <param name="B"> The vector projected onto. </param>
+    /// <returns> The magnitude of the vector projection. </returns>
+    public static float ProjectionABMagnitude(C_V2 A, C_V2 B)
+    {
+        float numerator = DotProduct(A, B);
+        float denominator = B.Magnitude;
+        return (numerator / denominator);
+    }
+
+    ///// <summary>
+    ///// Get the angle between lhs and rhs. 
+    ///// </summary>
+    ///// <returns> float angle in radians. </returns>
+    public static float AngleBetweenRad(C_V2 a, C_V2 b)
+    {
+        double numerator = a.x * b.x + a.y * b.y;
+        double denominator = a.Magnitude * b.Magnitude;
+        return Mathf.Acos((float)(numerator / denominator));
+    }
+
+    ///// <summary>
+    ///// Get the angle between lhs and rhs. 
+    ///// </summary>
+    ///// <returns> float angle in degrees. </returns>
+    public static float AngleBetweenDeg(C_V2 a, C_V2 b)
+    {
+        return (float)(AngleBetweenRad(a, b) * C_MathF.Rad2Deg);
+    }
+
+    ////TODO: Create Unit Test for Vector Decompose. 
+    //public static void VectorDecompose(C_V2 A, C_V2 B, out C_V2 projAB, out C_V2 AMinusProjAB)
+    //{
+    //    C_V2 _pAB = ProjectionAB(A, B);
+    //    projAB = _pAB;
+    //    AMinusProjAB = A - _pAB; 
+    //}
+
+    public static C_V2 Parallel(C_V2 a)
+    {
+        C_V2 direction = C_V2.right;
+        C_V2 projectionAB = ProjectionAB(a, direction.Unitized);
+        return projectionAB;
+    }
+
+    public static C_V2 Parallel(C_V2 a, C_V2 norm)
+    {
+        C_V2 projectionAB = ProjectionAB(a, norm.Unitized);
+        return projectionAB;
+    }
+
+    public static C_V2 Perpendicular(C_V2 a)
+    {
+        C_V2 direction = C_V2.right;
+        C_V2 projectionAB = ProjectionAB(a, direction.Unitized);
+        return projectionAB;
+    }
+
+    public static C_V2 Perpendicular(C_V2 a, C_V2 norm)
+    {
+        C_V2 projectionAB = ProjectionAB(a, norm.Unitized);
+        return projectionAB;
+    }
+
+    //public static C_V2 Reflection(C_V2 a, C_V2 normal)
+    //{
+    //    C_V2 para = Parallel(a, normal.Unitized);
+    //    C_V2 perp = Perpendicular(a, normal.Unitized);
+
+    //    C_V2 reflection = para + perp;
+    //    return reflection.Unitized;
+    //}
+
+    ////TODO: Calculate C_Vec2 reflection array. 
+
+    //public static C_P2D GetLineMidpointFromPoint(C_P2D point, C_V2 vec)
+    //{
+    //    return point + (C_P2D)vec.MidpointVec;
+    //}
+
+    #region Utility Functions. 
     public override bool Equals(object obj)
     {
         C_V2 objInst; 
@@ -265,8 +355,10 @@ public partial struct C_V2
         hash = hash * 23 + y.GetHashCode();
         return hash;
     }
+    #endregion
 
-    public static C_V2 operator +(C_Point2D a, C_V2 b) => new C_V2(a.x + b.x, a.y + b.y);
+    #region Operators. 
+    public static C_V2 operator +(C_P2D a, C_V2 b) => new C_V2(a.x + b.x, a.y + b.y);
     
     public static C_V2 operator +(C_V2 a, C_V2 b) => new C_V2(a.x + b.x, a.y + b.y);
     
@@ -285,4 +377,5 @@ public partial struct C_V2
     public static explicit operator Vector3(C_V2 vec) => new Vector3(vec.x, vec.y, 0);
     
     public static explicit operator Vector2(C_V2 vec) => new Vector2(vec.x, vec.y);
+    #endregion
 }

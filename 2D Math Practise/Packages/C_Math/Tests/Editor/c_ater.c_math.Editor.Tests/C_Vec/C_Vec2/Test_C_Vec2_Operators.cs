@@ -24,13 +24,13 @@ public class Test_CVec2_Operators
     {
 
         Assert.True(new C_V2(0.0F, 0.0F) ==
-            new C_Point2D(0.0F, -1.0F) + new C_Point2D(0.0F, 1.0F));
+            new C_P2D(0.0F, -1.0F) + new C_P2D(0.0F, 1.0F));
 
         Assert.True(new C_V2(0.0F, 2.0F) ==
-            new C_Point2D(0.0F, 1.0F) + new C_Point2D(0.0F, 1.0F));
+            new C_P2D(0.0F, 1.0F) + new C_P2D(0.0F, 1.0F));
 
         Assert.True(new C_V2(1.0F, 1.0F) ==
-            new C_Point2D(1.0F, 0.0F) + new C_Point2D(0.0F, 1.0F));
+            new C_P2D(1.0F, 0.0F) + new C_P2D(0.0F, 1.0F));
     }
 
     [Test]
