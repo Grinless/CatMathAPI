@@ -199,5 +199,14 @@ namespace C_Math.Shapes
             this._scale = scale;
             this._orientation = orientation;
         }
+
+        public void Draw()
+        {
+            Gizmos.DrawSphere(GetTransformedOrigin, 0.08F);
+            Gizmos.DrawLine(new Vector3(Max.x, Max.y, 0), new Vector3(Min.x, Max.y, 0));
+            Gizmos.DrawLine(new Vector3(Min.x, Max.y, 0), new Vector3(Min.x, Min.y, 0));
+            Gizmos.DrawLine(new Vector3(Min.x, Min.y, 0), new Vector3(Max.x, Min.y, 0));
+            Gizmos.DrawLine(new Vector3(Max.x, Min.y, 0), new Vector3(Max.x, Max.y, 0));
+        }
     }
 }

@@ -46,12 +46,12 @@ public struct C_M2X2
     /// <summary>
     /// Returns a C_M2X2 representing a clockwise 90 degree rotation. 
     /// </summary>
-    public static C_M2X2 Rot90C => rot90C;
+    public static C_M2X2 Rot90CW => rot90C;
 
     /// <summary>
     /// Returns a C_M2X2 representing a counter-clockwise 90 degree rotation. 
     /// </summary>
-    public static C_M2X2 Rot90CC => rot90CC;
+    public static C_M2X2 Rot90CCW => rot90CC;
     #endregion
 
     #region Row/Column Access Properties. 
@@ -147,15 +147,15 @@ public struct C_M2X2
     /// Returns vector v rotated 90 degrees counter-clockwise. 
     /// </summary>
     /// <param name="v"> The vector to rotate. </param>
-    public static Vector2 RotateCC90(Vector2 v) => Rot90CC * v;
-    public static C_V2 RotateCC90(C_V2 v) => Rot90CC * v;
+    public static Vector2 RotateCC90(Vector2 v) => Rot90CCW * v;
+    public static C_V2 RotateCC90(C_V2 v) => Rot90CCW * v;
 
     /// <summary>
     /// Returns vector v rotated 90 degrees clockwise. 
     /// </summary>
     /// <param name="v"> The vector to rotate. </param>
-    public static Vector2 RotateC90(Vector2 v) => Rot90C * v;
-    public static C_V2 RotateC90(C_V2 v) => Rot90C * v;
+    public static Vector2 RotateC90(Vector2 v) => Rot90CW * v;
+    public static C_V2 RotateC90(C_V2 v) => Rot90CW * v;
 
     /// <summary>
     /// Interchange C_M2X2 a's rows with columns.  

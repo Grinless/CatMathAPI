@@ -10,6 +10,11 @@ namespace C_Math
         public const double Rad2Deg = 180F / PI;
         public const double Deg2Rad = PI / 180F;
 
+        public static float Cos(float value) => Mathf.Cos(value);
+        public static float Sin(float value) => Mathf.Sin(value);
+        public static float Sec(float value) => 1 / Mathf.Cos(value);
+        public static float Cot(float value) => Mathf.Cos(value) / Mathf.Sin(value);
+
         /// <summary>
         /// Limit a value to the passed maximum.
         /// </summary>
@@ -102,7 +107,7 @@ namespace C_Math
         /// </summary>
         public static C_V2 PerpendicularCW(C_V2 v)
         {
-            return C_M2X2.Rot90C * v;
+            return C_M2X2.Rot90CW * v;
         }
 
         /// <summary>
@@ -110,12 +115,7 @@ namespace C_Math
         /// </summary>
         public static C_V2 PerpendicularCCW(C_V2 v)
         {
-            return C_M2X2.Rot90CC * v;
-        }
-
-        public static float GetLineMidpoint(C_P2D a, C_P2D b)
-        {
-            return ((C_V2)(b - a)).Magnitude / 2; 
+            return C_M2X2.Rot90CCW * v;
         }
 
         public static float GetLineMidpoint(C_V2 vec)

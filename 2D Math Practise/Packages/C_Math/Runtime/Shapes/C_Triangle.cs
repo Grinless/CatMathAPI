@@ -125,7 +125,7 @@ namespace C_Math.Shapes
                 for (int i = 0; i < sides.Length; i++)
                     normals[i] = (sides[i].normalized * (lengths[i] / 2)).normalized;
 
-                return C_M2X2.Rot90C * normals; 
+                return C_M2X2.Rot90CW * normals; 
             }
         }
 

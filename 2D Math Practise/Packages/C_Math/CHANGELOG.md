@@ -20,15 +20,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - C_Probability.                                          (#I1)
 
 ----
-## [1.1.1] - 2023-11-06
+## [1.1.2] - 2023-11-07
 
 ### Added
-- Added C_P2 -(C_P2D a, C_P2D b).                    (#A48)
-- Added C_V2.Perpendicular(C_V2 a).                (#A48)
-- Added C_V2.Perpendicular(C_V2 a, C_V2 norm).     (#A47)
-- Added C_V2.Parallel(C_V2 a).                     (#A46)
-- Added C_V2.Parallel(C_V2 a, C_V2 norm).          (#A45)
-- Added C_V2.AngleBetweenDeg(C_V2 A, C_V2 B).      (#A43)
+- Added C_P2 -(C_P2D a, C_P2D b).                    (#A51)
+- Added C_V2.Perpendicular(C_V2 a).                  (#A50)
+- Added C_V2.Perpendicular(C_V2 a, C_V2 norm).       (#A49)
+- Added C_V2.NormalCCW property.                     (#A48)
+- Added C_V2.NormalCW property.                      (#A47)
+- Added C_V2.Parallel(C_V2 a).                       (#A46)
+- Added C_V2.Parallel(C_V2 a, C_V2 norm).            (#A45)
+- Added C_V2.AngleBetweenDeg(C_V2 A, C_V2 B).        (#A43)
 - Added C_V2 Operator Overload +(C_P2D, C_V2 vec)    (#A42)
 - Added C_V2.GetLineMidpoint(C_P2D, C_V2 vec)        (#A41)
 - Added C_V2.MidpointVec property.                   (#A40)

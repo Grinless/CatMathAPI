@@ -14,17 +14,68 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PixelRect:
     serializedVersion: 2
-    x: 1544
+    x: 1537
     y: 51
-    width: 1108
-    height: 1021
+    width: 958
+    height: 1028
   m_ShowMode: 4
-  m_Title: Project
-  m_RootView: {fileID: 6}
+  m_Title: Inspector
+  m_RootView: {fileID: 8}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 0
 --- !u!114 &2
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: ConsoleWindow
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 483
+    y: 0
+    width: 244
+    height: 399
+  m_MinSize: {x: 102, y: 121}
+  m_MaxSize: {x: 4002, y: 4021}
+  m_ActualView: {fileID: 20}
+  m_Panes:
+  - {fileID: 20}
+  m_Selected: 0
+  m_LastSelected: 0
+--- !u!114 &3
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children:
+  - {fileID: 7}
+  - {fileID: 2}
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 579
+    width: 727
+    height: 399
+  m_MinSize: {x: 200, y: 50}
+  m_MaxSize: {x: 16192, y: 8096}
+  vertical: 0
+  controlID: 219
+--- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -37,19 +88,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-  - {fileID: 9}
-  - {fileID: 3}
+  - {fileID: 11}
+  - {fileID: 5}
   m_Position:
     serializedVersion: 2
     x: 0
     y: 30
-    width: 1108
-    height: 971
+    width: 958
+    height: 978
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 339
---- !u!114 &3
+  controlID: 111
+--- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -59,23 +110,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
+  m_Name: InspectorWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 846
+    x: 727
     y: 0
-    width: 262
-    height: 971
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 13}
+    width: 231
+    height: 978
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 16}
   m_Panes:
-  - {fileID: 13}
+  - {fileID: 16}
+  - {fileID: 14}
   m_Selected: 0
-  m_LastSelected: 0
---- !u!114 &4
+  m_LastSelected: 1
+--- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -92,16 +144,16 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 209
-    height: 575
+    width: 177
+    height: 579
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 14}
+  m_ActualView: {fileID: 17}
   m_Panes:
-  - {fileID: 14}
+  - {fileID: 17}
   m_Selected: 0
   m_LastSelected: 0
---- !u!114 &5
+--- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -117,18 +169,17 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 575
-    width: 846
-    height: 396
+    y: 0
+    width: 483
+    height: 399
   m_MinSize: {x: 231, y: 271}
   m_MaxSize: {x: 10001, y: 10021}
-  m_ActualView: {fileID: 12}
+  m_ActualView: {fileID: 15}
   m_Panes:
-  - {fileID: 12}
-  - {fileID: 17}
+  - {fileID: 15}
   m_Selected: 0
-  m_LastSelected: 1
---- !u!114 &6
+  m_LastSelected: 0
+--- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -141,22 +192,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-  - {fileID: 7}
-  - {fileID: 2}
-  - {fileID: 8}
+  - {fileID: 9}
+  - {fileID: 4}
+  - {fileID: 10}
   m_Position:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1108
-    height: 1021
+    width: 958
+    height: 1028
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_UseTopView: 1
   m_TopViewHeight: 30
   m_UseBottomView: 1
   m_BottomViewHeight: 20
---- !u!114 &7
+--- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -173,12 +224,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1108
+    width: 958
     height: 30
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
-  m_LastLoadedLayoutName: Default
---- !u!114 &8
+  m_LastLoadedLayoutName: 
+--- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -194,61 +245,11 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 1001
-    width: 1108
+    y: 1008
+    width: 958
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
---- !u!114 &9
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Children:
-  - {fileID: 10}
-  - {fileID: 5}
-  m_Position:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 846
-    height: 971
-  m_MinSize: {x: 200, y: 100}
-  m_MaxSize: {x: 16192, y: 16192}
-  vertical: 1
-  controlID: 285
---- !u!114 &10
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Children:
-  - {fileID: 4}
-  - {fileID: 11}
-  m_Position:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 846
-    height: 575
-  m_MinSize: {x: 200, y: 50}
-  m_MaxSize: {x: 16192, y: 8096}
-  vertical: 0
-  controlID: 276
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -258,25 +259,2877 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 1
-  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children:
+  - {fileID: 12}
+  - {fileID: 3}
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 727
+    height: 978
+  m_MinSize: {x: 200, y: 100}
+  m_MaxSize: {x: 16192, y: 16192}
+  vertical: 1
+  controlID: 17
+--- !u!114 &12
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children:
+  - {fileID: 6}
+  - {fileID: 13}
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 727
+    height: 579
+  m_MinSize: {x: 200, y: 50}
+  m_MaxSize: {x: 16192, y: 8096}
+  vertical: 0
+  controlID: 18
+--- !u!114 &13
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: SceneView
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 209
+    x: 177
     y: 0
-    width: 637
-    height: 575
+    width: 550
+    height: 579
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 15}
+  m_ActualView: {fileID: 18}
   m_Panes:
-  - {fileID: 15}
-  - {fileID: 16}
+  - {fileID: 18}
+  - {fileID: 19}
   m_Selected: 0
   m_LastSelected: 1
---- !u!114 &12
+--- !u!114 &14
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 13401, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Test Runner
+    m_Image: {fileID: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 2264
+    y: 81
+    width: 230
+    height: 957
+  m_SerializedDataModeController:
+    m_DataMode: 0
+    m_PreferredDataMode: 0
+    m_SupportedDataModes: 
+    isAutomatic: 1
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+    m_OverlaysVisible: 1
+  m_Spl:
+    ID: 1598
+    splitterInitialOffset: 0
+    currentActiveSplitter: -1
+    realSizes:
+    - 665
+    - 222
+    relativeSizes:
+    - 0.75
+    - 0.25
+    minSizes:
+    - 32
+    - 32
+    maxSizes:
+    - 0
+    - 0
+    lastTotalSize: 887
+    splitSize: 6
+    xOffset: 0
+    m_Version: 1
+    oldRealSizes: 
+    oldMinSizes: 
+    oldMaxSizes: 
+    oldSplitSize: 0
+  m_TestTypeToolbarIndex: 1
+  m_PlayModeTestListGUI:
+    m_Window: {fileID: 0}
+    m_NewResultList: []
+    m_ResultText: 
+    m_ResultStacktrace: 
+    m_TestListState:
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 
+      m_RenameOverlay:
+        m_UserAcceptedRename: 0
+        m_Name: 
+        m_OriginalName: 
+        m_EditFieldRect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        m_UserData: 0
+        m_IsWaitingForDelay: 0
+        m_IsRenaming: 0
+        m_OriginalEventType: 11
+        m_IsRenamingFilename: 0
+        m_ClientGUIView: {fileID: 0}
+      m_SearchString: 
+    m_TestRunnerUIFilter:
+      PassedHidden: 0
+      FailedHidden: 0
+      NotRunHidden: 0
+      m_SearchString: 
+      selectedCategoryMask: 0
+      availableCategories: []
+    m_SelectedOption: 0
+  m_EditModeTestListGUI:
+    m_Window: {fileID: 14}
+    m_NewResultList:
+    - id: 1000
+      uniqueId: '[2D Math Practise][suite]'
+      name: 2D Math Practise
+      fullName: 2D Math Practise
+      resultStatus: 1
+      duration: 0.2339547
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 
+      parentUniqueId: 
+    - id: 1004
+      uniqueId: '[c_ater.c_math.Editor.Tests][C:/Users/Chesh/OneDrive/Documents/GitHub/CatMathAPI/2D
+        Math Practise/Library/ScriptAssemblies/c_ater.c_math.Editor.Tests.dll][suite]'
+      name: c_ater.c_math.Editor.Tests.dll
+      fullName: C:/Users/Chesh/OneDrive/Documents/GitHub/CatMathAPI/2D Math Practise/Library/ScriptAssemblies/c_ater.c_math.Editor.Tests.dll
+      resultStatus: 1
+      duration: 0.215529
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1000
+      parentUniqueId: '[2D Math Practise][suite]'
+    - id: 1017
+      uniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_M2X2_MathFunctions][suite]
+      name: Test_C_M2X2_MathFunctions
+      fullName: Test_C_M2X2_MathFunctions
+      resultStatus: 1
+      duration: 0.2112485
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1055
+      parentUniqueId: '[c_ater.c_math.Editor.Tests][C:/Users/Chesh/OneDrive/Documents/GitHub/CatMathAPI/2D
+        Math Practise/Library/ScriptAssemblies/c_ater.c_math.Editor.Tests.dll][suite]'
+    - id: 1011
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_C_M2X2_MathFunctions/[c_ater.c_math.Editor.Tests][Test_C_M2X2_MathFunctions.Test_CM2X2_Adjoint]
+      name: Test_CM2X2_Adjoint
+      fullName: Test_C_M2X2_MathFunctions.Test_CM2X2_Adjoint
+      resultStatus: 1
+      duration: 0.1073464
+      messages: 
+      output: "[1, 2] \n[3, 4]\r\n"
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1009
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_M2X2_MathFunctions][suite]
+    - id: 1019
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_C_M2X2_MathFunctions/[c_ater.c_math.Editor.Tests][Test_C_M2X2_MathFunctions.Test_CM2X2_Inverse]
+      name: Test_CM2X2_Inverse
+      fullName: Test_C_M2X2_MathFunctions.Test_CM2X2_Inverse
+      resultStatus: 1
+      duration: 0.0004065
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1017
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_M2X2_MathFunctions][suite]
+    - id: 1018
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_C_M2X2_MathFunctions/[c_ater.c_math.Editor.Tests][Test_C_M2X2_MathFunctions.Test_CM2X2_Transpose]
+      name: Test_CM2X2_Transpose
+      fullName: Test_C_M2X2_MathFunctions.Test_CM2X2_Transpose
+      resultStatus: 1
+      duration: 0.0002366
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1017
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_M2X2_MathFunctions][suite]
+    - id: 1014
+      uniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_M2X2_MathProperties][suite]
+      name: Test_C_M2X2_MathProperties
+      fullName: Test_C_M2X2_MathProperties
+      resultStatus: 1
+      duration: 0.0081994
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1055
+      parentUniqueId: '[c_ater.c_math.Editor.Tests][C:/Users/Chesh/OneDrive/Documents/GitHub/CatMathAPI/2D
+        Math Practise/Library/ScriptAssemblies/c_ater.c_math.Editor.Tests.dll][suite]'
+    - id: 1016
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_C_M2X2_MathProperties/[c_ater.c_math.Editor.Tests][Test_C_M2X2_MathProperties.Test_CM2X2_Adjoint]
+      name: Test_CM2X2_Adjoint
+      fullName: Test_C_M2X2_MathProperties.Test_CM2X2_Adjoint
+      resultStatus: 1
+      duration: 0.0002396
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1014
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_M2X2_MathProperties][suite]
+    - id: 1015
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_C_M2X2_MathProperties/[c_ater.c_math.Editor.Tests][Test_C_M2X2_MathProperties.Test_CM2X2_Determinant]
+      name: Test_CM2X2_Determinant
+      fullName: Test_C_M2X2_MathProperties.Test_CM2X2_Determinant
+      resultStatus: 1
+      duration: 0.0010087
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1014
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_M2X2_MathProperties][suite]
+    - id: 1001
+      uniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_M2X2_Operators][suite]
+      name: Test_C_M2X2_Operators
+      fullName: Test_C_M2X2_Operators
+      resultStatus: 1
+      duration: 0.0074888
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1055
+      parentUniqueId: '[c_ater.c_math.Editor.Tests][C:/Users/Chesh/OneDrive/Documents/GitHub/CatMathAPI/2D
+        Math Practise/Library/ScriptAssemblies/c_ater.c_math.Editor.Tests.dll][suite]'
+    - id: 1007
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_C_M2X2_Operators/[c_ater.c_math.Editor.Tests][Test_C_M2X2_Operators.Test_C_Matrix2X2_Multiplication]
+      name: Test_C_Matrix2X2_Multiplication
+      fullName: Test_C_M2X2_Operators.Test_C_Matrix2X2_Multiplication
+      resultStatus: 1
+      duration: 0.0015599
+      messages: 
+      output: "[1, 2] \n[3, 4]\r\n[1, 1] \n[1, 1]\r\n"
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_M2X2_Operators][suite]
+    - id: 1004
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_C_M2X2_Operators/[c_ater.c_math.Editor.Tests][Test_C_M2X2_Operators.Test_CM2X2_Addition]
+      name: Test_CM2X2_Addition
+      fullName: Test_C_M2X2_Operators.Test_CM2X2_Addition
+      resultStatus: 1
+      duration: 0.0003151
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_M2X2_Operators][suite]
+    - id: 1002
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_C_M2X2_Operators/[c_ater.c_math.Editor.Tests][Test_C_M2X2_Operators.Test_CM2X2_Equality]
+      name: Test_CM2X2_Equality
+      fullName: Test_C_M2X2_Operators.Test_CM2X2_Equality
+      resultStatus: 1
+      duration: 0.0007183
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_M2X2_Operators][suite]
+    - id: 1003
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_C_M2X2_Operators/[c_ater.c_math.Editor.Tests][Test_C_M2X2_Operators.Test_CM2X2_Inequality]
+      name: Test_CM2X2_Inequality
+      fullName: Test_C_M2X2_Operators.Test_CM2X2_Inequality
+      resultStatus: 1
+      duration: 0.0002172
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_M2X2_Operators][suite]
+    - id: 1006
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_C_M2X2_Operators/[c_ater.c_math.Editor.Tests][Test_C_M2X2_Operators.Test_CM2X2_ScalarMultiplication]
+      name: Test_CM2X2_ScalarMultiplication
+      fullName: Test_C_M2X2_Operators.Test_CM2X2_ScalarMultiplication
+      resultStatus: 1
+      duration: 0.0001711
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_M2X2_Operators][suite]
+    - id: 1005
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_C_M2X2_Operators/[c_ater.c_math.Editor.Tests][Test_C_M2X2_Operators.Test_CM2X2_Subtraction]
+      name: Test_CM2X2_Subtraction
+      fullName: Test_C_M2X2_Operators.Test_CM2X2_Subtraction
+      resultStatus: 1
+      duration: 0.0002651
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_M2X2_Operators][suite]
+    - id: 1008
+      uniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_M2X2_Properties][suite]
+      name: Test_C_M2X2_Properties
+      fullName: Test_C_M2X2_Properties
+      resultStatus: 1
+      duration: 0.0041716
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1055
+      parentUniqueId: '[c_ater.c_math.Editor.Tests][C:/Users/Chesh/OneDrive/Documents/GitHub/CatMathAPI/2D
+        Math Practise/Library/ScriptAssemblies/c_ater.c_math.Editor.Tests.dll][suite]'
+    - id: 1010
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_C_M2X2_Properties/[c_ater.c_math.Editor.Tests][Test_C_M2X2_Properties.Test_CM2X2_ColumnGetters]
+      name: Test_CM2X2_ColumnGetters
+      fullName: Test_C_M2X2_Properties.Test_CM2X2_ColumnGetters
+      resultStatus: 1
+      duration: 0.0002865
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1008
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_M2X2_Properties][suite]
+    - id: 1009
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_C_M2X2_Properties/[c_ater.c_math.Editor.Tests][Test_C_M2X2_Properties.Test_CM2X2_RowGetters]
+      name: Test_CM2X2_RowGetters
+      fullName: Test_C_M2X2_Properties.Test_CM2X2_RowGetters
+      resultStatus: 1
+      duration: 0.000281
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1008
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_M2X2_Properties][suite]
+    - id: 1001
+      uniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_M2X2_UtilityFunctions][suite]
+      name: Test_C_M2X2_UtilityFunctions
+      fullName: Test_C_M2X2_UtilityFunctions
+      resultStatus: 1
+      duration: 0.0042211
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1098
+      parentUniqueId: '[c_ater.c_math.Editor.Tests][C:/Users/Chesh/OneDrive/Documents/GitHub/CatMathAPI/2D
+        Math Practise/Library/ScriptAssemblies/c_ater.c_math.Editor.Tests.dll][suite]'
+    - id: 1003
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_C_M2X2_UtilityFunctions/[c_ater.c_math.Editor.Tests][Test_C_M2X2_UtilityFunctions.Test_CM2X2_Copy]
+      name: Test_CM2X2_Copy
+      fullName: Test_C_M2X2_UtilityFunctions.Test_CM2X2_Copy
+      resultStatus: 1
+      duration: 0.0003
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_M2X2_UtilityFunctions][suite]
+    - id: 1002
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_C_M2X2_UtilityFunctions/[c_ater.c_math.Editor.Tests][Test_C_M2X2_UtilityFunctions.Test_CM2X2_Elements]
+      name: Test_CM2X2_Elements
+      fullName: Test_C_M2X2_UtilityFunctions.Test_CM2X2_Elements
+      resultStatus: 1
+      duration: 0.0009231
+      messages: 
+      output: "[1, 2] \n[3, 4]\r\n"
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_M2X2_UtilityFunctions][suite]
+    - id: 1023
+      uniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_M3X3][suite]
+      name: Test_C_M3X3
+      fullName: Test_C_M3X3
+      resultStatus: 1
+      duration: 0.0030729
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1061
+      parentUniqueId: '[c_ater.c_math.Editor.Tests][C:/Users/Chesh/OneDrive/Documents/GitHub/CatMathAPI/2D
+        Math Practise/Library/ScriptAssemblies/c_ater.c_math.Editor.Tests.dll][suite]'
+    - id: 1025
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_C_M3X3/[c_ater.c_math.Editor.Tests][Test_C_M3X3.Test_C_Matrix3X3_TestDeterminant]
+      name: Test_C_Matrix3X3_TestDeterminant
+      fullName: Test_C_M3X3.Test_C_Matrix3X3_TestDeterminant
+      resultStatus: 1
+      duration: 0.0003503
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1023
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_M3X3][suite]
+    - id: 1024
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_C_M3X3/[c_ater.c_math.Editor.Tests][Test_C_M3X3.Test_C_Matrix3X3SimplePasses]
+      name: Test_C_Matrix3X3SimplePasses
+      fullName: Test_C_M3X3.Test_C_Matrix3X3SimplePasses
+      resultStatus: 1
+      duration: 0.0000791
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1023
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_M3X3][suite]
+    - id: 1020
+      uniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_M3X3_Operators][suite]
+      name: Test_C_M3X3_Operators
+      fullName: Test_C_M3X3_Operators
+      resultStatus: 1
+      duration: 0.0070372
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1061
+      parentUniqueId: '[c_ater.c_math.Editor.Tests][C:/Users/Chesh/OneDrive/Documents/GitHub/CatMathAPI/2D
+        Math Practise/Library/ScriptAssemblies/c_ater.c_math.Editor.Tests.dll][suite]'
+    - id: 1033
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_C_M3X3_Operators/[c_ater.c_math.Editor.Tests][Test_C_M3X3_Operators.Test_C_Matrix3X3_ColumnAccessors]
+      name: Test_C_Matrix3X3_ColumnAccessors
+      fullName: Test_C_M3X3_Operators.Test_C_Matrix3X3_ColumnAccessors
+      resultStatus: 1
+      duration: 0.0015089
+      messages: 
+      output: '[ 1, 4, 7]
+
+        [ 2, 5, 8]
+
+        [ 3, 6, 9]
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1031
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_M3X3_Operators][suite]
+    - id: 1021
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_C_M3X3_Operators/[c_ater.c_math.Editor.Tests][Test_C_M3X3_Operators.Test_C_Matrix3X3_Equality]
+      name: Test_C_Matrix3X3_Equality
+      fullName: Test_C_M3X3_Operators.Test_C_Matrix3X3_Equality
+      resultStatus: 1
+      duration: 0.0009855
+      messages: 
+      output: '[1 0 0]
+
+        [0 1 0]
+
+        [0 0 1]
+
+        
+
+        [1 0
+        0]
+
+        [0 1 0]
+
+        [0 0 1]
+
+        
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1020
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_M3X3_Operators][suite]
+    - id: 1022
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_C_M3X3_Operators/[c_ater.c_math.Editor.Tests][Test_C_M3X3_Operators.Test_C_Matrix3X3_Inequality]
+      name: Test_C_Matrix3X3_Inequality
+      fullName: Test_C_M3X3_Operators.Test_C_Matrix3X3_Inequality
+      resultStatus: 1
+      duration: 0.0001892
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1020
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_M3X3_Operators][suite]
+    - id: 1032
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_C_M3X3_Operators/[c_ater.c_math.Editor.Tests][Test_C_M3X3_Operators.Test_C_Matrix3X3_RowAccessors]
+      name: Test_C_Matrix3X3_RowAccessors
+      fullName: Test_C_M3X3_Operators.Test_C_Matrix3X3_RowAccessors
+      resultStatus: 1
+      duration: 0.0014418
+      messages: 
+      output: '[ 1, 2, 3]
+
+        [ 4, 5, 6]
+
+        [ 7, 8, 9]
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1031
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_M3X3_Operators][suite]
+    - id: 1001
+      uniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_MathF][suite]
+      name: Test_C_MathF
+      fullName: Test_C_MathF
+      resultStatus: 1
+      duration: 0.0088586
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1143
+      parentUniqueId: '[c_ater.c_math.Editor.Tests][C:/Users/Chesh/OneDrive/Documents/GitHub/CatMathAPI/2D
+        Math Practise/Library/ScriptAssemblies/c_ater.c_math.Editor.Tests.dll][suite]'
+    - id: 1005
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_C_MathF/[c_ater.c_math.Editor.Tests][Test_C_MathF.Test_C_Abs]
+      name: Test_C_Abs
+      fullName: Test_C_MathF.Test_C_Abs
+      resultStatus: 1
+      duration: 0.0006625
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_MathF][suite]
+    - id: 1006
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_C_MathF/[c_ater.c_math.Editor.Tests][Test_C_MathF.Test_C_Clamp]
+      name: Test_C_Clamp
+      fullName: Test_C_MathF.Test_C_Clamp
+      resultStatus: 1
+      duration: 0.0008138
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_MathF][suite]
+    - id: 1006
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_C_MathF/[c_ater.c_math.Editor.Tests][Test_C_MathF.Test_C_Max]
+      name: Test_C_Max
+      fullName: Test_C_MathF.Test_C_Max
+      resultStatus: 1
+      duration: 0.0001986
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_MathF][suite]
+    - id: 1005
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_C_MathF/[c_ater.c_math.Editor.Tests][Test_C_MathF.Test_C_Min]
+      name: Test_C_Min
+      fullName: Test_C_MathF.Test_C_Min
+      resultStatus: 1
+      duration: 0.0001869
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_MathF][suite]
+    - id: 1008
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_C_MathF/[c_ater.c_math.Editor.Tests][Test_C_MathF.Test_C_PerpendicularCCW]
+      name: Test_C_PerpendicularCCW
+      fullName: Test_C_MathF.Test_C_PerpendicularCCW
+      resultStatus: 1
+      duration: 0.0016173
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_MathF][suite]
+    - id: 1007
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_C_MathF/[c_ater.c_math.Editor.Tests][Test_C_MathF.Test_C_PerpendicularCW]
+      name: Test_C_PerpendicularCW
+      fullName: Test_C_MathF.Test_C_PerpendicularCW
+      resultStatus: 1
+      duration: 0.0007564
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_MathF][suite]
+    - id: 1002
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_C_MathF/[c_ater.c_math.Editor.Tests][Test_C_MathF.Test_C_RangeConversions]
+      name: Test_C_RangeConversions
+      fullName: Test_C_MathF.Test_C_RangeConversions
+      resultStatus: 1
+      duration: 0.0007956
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_MathF][suite]
+    - id: 1001
+      uniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_Seq2][suite]
+      name: Test_C_Seq2
+      fullName: Test_C_Seq2
+      resultStatus: 1
+      duration: 0.006102
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1004
+      parentUniqueId: '[c_ater.c_math.Editor.Tests][C:/Users/Chesh/OneDrive/Documents/GitHub/CatMathAPI/2D
+        Math Practise/Library/ScriptAssemblies/c_ater.c_math.Editor.Tests.dll][suite]'
+    - id: 1003
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_C_Seq2/[c_ater.c_math.Editor.Tests][Test_C_Seq2.Test_C_Seq2Creation]
+      name: Test_C_Seq2Creation
+      fullName: Test_C_Seq2.Test_C_Seq2Creation
+      resultStatus: 1
+      duration: 0.0020977
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_Seq2][suite]
+    - id: 1007
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_C_Seq2/[c_ater.c_math.Editor.Tests][Test_C_Seq2.Test_C_Seq2GetElement]
+      name: Test_C_Seq2GetElement
+      fullName: Test_C_Seq2.Test_C_Seq2GetElement
+      resultStatus: 1
+      duration: 0.0003616
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_Seq2][suite]
+    - id: 1002
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_C_Seq2/[c_ater.c_math.Editor.Tests][Test_C_Seq2.Test_C_Seq2SimplePasses]
+      name: Test_C_Seq2SimplePasses
+      fullName: Test_C_Seq2.Test_C_Seq2SimplePasses
+      resultStatus: 1
+      duration: 0.0001134
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_Seq2][suite]
+    - id: 1030
+      uniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_Seq2_Shorthand][suite]
+      name: Test_C_Seq2_Shorthand
+      fullName: Test_C_Seq2_Shorthand
+      resultStatus: 1
+      duration: 0.0035006
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1102
+      parentUniqueId: '[c_ater.c_math.Editor.Tests][C:/Users/Chesh/OneDrive/Documents/GitHub/CatMathAPI/2D
+        Math Practise/Library/ScriptAssemblies/c_ater.c_math.Editor.Tests.dll][suite]'
+    - id: 1032
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_C_Seq2_Shorthand/[c_ater.c_math.Editor.Tests][Test_C_Seq2_Shorthand.Test_C_Seq2Shorthand_SeqX]
+      name: Test_C_Seq2Shorthand_SeqX
+      fullName: Test_C_Seq2_Shorthand.Test_C_Seq2Shorthand_SeqX
+      resultStatus: 1
+      duration: 0.0002037
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1030
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_Seq2_Shorthand][suite]
+    - id: 1033
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_C_Seq2_Shorthand/[c_ater.c_math.Editor.Tests][Test_C_Seq2_Shorthand.Test_C_Seq2Shorthand_SeqY]
+      name: Test_C_Seq2Shorthand_SeqY
+      fullName: Test_C_Seq2_Shorthand.Test_C_Seq2Shorthand_SeqY
+      resultStatus: 1
+      duration: 0.0001433
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1030
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_Seq2_Shorthand][suite]
+    - id: 1031
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_C_Seq2_Shorthand/[c_ater.c_math.Editor.Tests][Test_C_Seq2_Shorthand.Test_C_Seq2Shorthand_Zero]
+      name: Test_C_Seq2Shorthand_Zero
+      fullName: Test_C_Seq2_Shorthand.Test_C_Seq2Shorthand_Zero
+      resultStatus: 1
+      duration: 0.000122
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1030
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_Seq2_Shorthand][suite]
+    - id: 1008
+      uniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_Seq3][suite]
+      name: Test_C_Seq3
+      fullName: Test_C_Seq3
+      resultStatus: 1
+      duration: 0.0038241
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1017
+      parentUniqueId: '[c_ater.c_math.Editor.Tests][C:/Users/Chesh/OneDrive/Documents/GitHub/CatMathAPI/2D
+        Math Practise/Library/ScriptAssemblies/c_ater.c_math.Editor.Tests.dll][suite]'
+    - id: 1010
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_C_Seq3/[c_ater.c_math.Editor.Tests][Test_C_Seq3.Test_C_Seq3Creation]
+      name: Test_C_Seq3Creation
+      fullName: Test_C_Seq3.Test_C_Seq3Creation
+      resultStatus: 1
+      duration: 0.0003659
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1008
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_Seq3][suite]
+    - id: 1009
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_C_Seq3/[c_ater.c_math.Editor.Tests][Test_C_Seq3.Test_C_Seq3SimplePasses]
+      name: Test_C_Seq3SimplePasses
+      fullName: Test_C_Seq3.Test_C_Seq3SimplePasses
+      resultStatus: 1
+      duration: 0.0001169
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1008
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_Seq3][suite]
+    - id: 1015
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_C_Seq3/[c_ater.c_math.Editor.Tests][Test_C_Seq3.Test_CSeq3_Equality]
+      name: Test_CSeq3_Equality
+      fullName: Test_C_Seq3.Test_CSeq3_Equality
+      resultStatus: 1
+      duration: 0.0001679
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1008
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_Seq3][suite]
+    - id: 1016
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_C_Seq3/[c_ater.c_math.Editor.Tests][Test_C_Seq3.Test_CSeq3_Inequality]
+      name: Test_CSeq3_Inequality
+      fullName: Test_C_Seq3.Test_CSeq3_Inequality
+      resultStatus: 1
+      duration: 0.0001254
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1008
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_Seq3][suite]
+    - id: 1038
+      uniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_Seq3_Shorthand][suite]
+      name: Test_C_Seq3_Shorthand
+      fullName: Test_C_Seq3_Shorthand
+      resultStatus: 1
+      duration: 0.0033867
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1101
+      parentUniqueId: '[c_ater.c_math.Editor.Tests][C:/Users/Chesh/OneDrive/Documents/GitHub/CatMathAPI/2D
+        Math Practise/Library/ScriptAssemblies/c_ater.c_math.Editor.Tests.dll][suite]'
+    - id: 1040
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_C_Seq3_Shorthand/[c_ater.c_math.Editor.Tests][Test_C_Seq3_Shorthand.Test_C_Seq3Shorthand_SeqX]
+      name: Test_C_Seq3Shorthand_SeqX
+      fullName: Test_C_Seq3_Shorthand.Test_C_Seq3Shorthand_SeqX
+      resultStatus: 1
+      duration: 0.0001689
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1038
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_Seq3_Shorthand][suite]
+    - id: 1041
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_C_Seq3_Shorthand/[c_ater.c_math.Editor.Tests][Test_C_Seq3_Shorthand.Test_C_Seq3Shorthand_SeqY]
+      name: Test_C_Seq3Shorthand_SeqY
+      fullName: Test_C_Seq3_Shorthand.Test_C_Seq3Shorthand_SeqY
+      resultStatus: 1
+      duration: 0.0001347
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1038
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_Seq3_Shorthand][suite]
+    - id: 1042
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_C_Seq3_Shorthand/[c_ater.c_math.Editor.Tests][Test_C_Seq3_Shorthand.Test_C_Seq3Shorthand_SeqZ]
+      name: Test_C_Seq3Shorthand_SeqZ
+      fullName: Test_C_Seq3_Shorthand.Test_C_Seq3Shorthand_SeqZ
+      resultStatus: 1
+      duration: 0.0001216
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1038
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_Seq3_Shorthand][suite]
+    - id: 1039
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_C_Seq3_Shorthand/[c_ater.c_math.Editor.Tests][Test_C_Seq3_Shorthand.Test_C_Seq3Shorthand_Zero]
+      name: Test_C_Seq3Shorthand_Zero
+      fullName: Test_C_Seq3_Shorthand.Test_C_Seq3Shorthand_Zero
+      resultStatus: 1
+      duration: 0.0001156
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1038
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_Seq3_Shorthand][suite]
+    - id: 1017
+      uniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_Seq4][suite]
+      name: Test_C_Seq4
+      fullName: Test_C_Seq4
+      resultStatus: 1
+      duration: 0.0034508
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1026
+      parentUniqueId: '[c_ater.c_math.Editor.Tests][C:/Users/Chesh/OneDrive/Documents/GitHub/CatMathAPI/2D
+        Math Practise/Library/ScriptAssemblies/c_ater.c_math.Editor.Tests.dll][suite]'
+    - id: 1019
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_C_Seq4/[c_ater.c_math.Editor.Tests][Test_C_Seq4.Test_C_Seq2Creation]
+      name: Test_C_Seq2Creation
+      fullName: Test_C_Seq4.Test_C_Seq2Creation
+      resultStatus: 1
+      duration: 0.0004331
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1017
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_Seq4][suite]
+    - id: 1025
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_C_Seq4/[c_ater.c_math.Editor.Tests][Test_C_Seq4.Test_C_Seq2GetElement]
+      name: Test_C_Seq2GetElement
+      fullName: Test_C_Seq4.Test_C_Seq2GetElement
+      resultStatus: 1
+      duration: 0.0002619
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1017
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_Seq4][suite]
+    - id: 1018
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_C_Seq4/[c_ater.c_math.Editor.Tests][Test_C_Seq4.Test_C_Seq3SimplePasses]
+      name: Test_C_Seq3SimplePasses
+      fullName: Test_C_Seq4.Test_C_Seq3SimplePasses
+      resultStatus: 1
+      duration: 0.00011
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1017
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_Seq4][suite]
+    - id: 1046
+      uniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_Seq4_Shorthand][suite]
+      name: Test_C_Seq4_Shorthand
+      fullName: Test_C_Seq4_Shorthand
+      resultStatus: 1
+      duration: 0.0042749
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1100
+      parentUniqueId: '[c_ater.c_math.Editor.Tests][C:/Users/Chesh/OneDrive/Documents/GitHub/CatMathAPI/2D
+        Math Practise/Library/ScriptAssemblies/c_ater.c_math.Editor.Tests.dll][suite]'
+    - id: 1051
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_C_Seq4_Shorthand/[c_ater.c_math.Editor.Tests][Test_C_Seq4_Shorthand.Test_C_Seq2Shorthand_SeqW]
+      name: Test_C_Seq2Shorthand_SeqW
+      fullName: Test_C_Seq4_Shorthand.Test_C_Seq2Shorthand_SeqW
+      resultStatus: 1
+      duration: 0.0002125
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1046
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_Seq4_Shorthand][suite]
+    - id: 1048
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_C_Seq4_Shorthand/[c_ater.c_math.Editor.Tests][Test_C_Seq4_Shorthand.Test_C_Seq2Shorthand_SeqX]
+      name: Test_C_Seq2Shorthand_SeqX
+      fullName: Test_C_Seq4_Shorthand.Test_C_Seq2Shorthand_SeqX
+      resultStatus: 1
+      duration: 0.0001427
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1046
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_Seq4_Shorthand][suite]
+    - id: 1049
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_C_Seq4_Shorthand/[c_ater.c_math.Editor.Tests][Test_C_Seq4_Shorthand.Test_C_Seq2Shorthand_SeqY]
+      name: Test_C_Seq2Shorthand_SeqY
+      fullName: Test_C_Seq4_Shorthand.Test_C_Seq2Shorthand_SeqY
+      resultStatus: 1
+      duration: 0.0001149
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1046
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_Seq4_Shorthand][suite]
+    - id: 1050
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_C_Seq4_Shorthand/[c_ater.c_math.Editor.Tests][Test_C_Seq4_Shorthand.Test_C_Seq2Shorthand_SeqZ]
+      name: Test_C_Seq2Shorthand_SeqZ
+      fullName: Test_C_Seq4_Shorthand.Test_C_Seq2Shorthand_SeqZ
+      resultStatus: 1
+      duration: 0.0001178
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1046
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_Seq4_Shorthand][suite]
+    - id: 1047
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_C_Seq4_Shorthand/[c_ater.c_math.Editor.Tests][Test_C_Seq4_Shorthand.Test_C_Seq2Shorthand_Zero]
+      name: Test_C_Seq2Shorthand_Zero
+      fullName: Test_C_Seq4_Shorthand.Test_C_Seq2Shorthand_Zero
+      resultStatus: 1
+      duration: 0.0001422
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1046
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_Seq4_Shorthand][suite]
+    - id: 1026
+      uniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_Seq5][suite]
+      name: Test_C_Seq5
+      fullName: Test_C_Seq5
+      resultStatus: 1
+      duration: 0.0037029
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1036
+      parentUniqueId: '[c_ater.c_math.Editor.Tests][C:/Users/Chesh/OneDrive/Documents/GitHub/CatMathAPI/2D
+        Math Practise/Library/ScriptAssemblies/c_ater.c_math.Editor.Tests.dll][suite]'
+    - id: 1027
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_C_Seq5/[c_ater.c_math.Editor.Tests][Test_C_Seq5.Test_C_Seq4SimplePasses]
+      name: Test_C_Seq4SimplePasses
+      fullName: Test_C_Seq5.Test_C_Seq4SimplePasses
+      resultStatus: 1
+      duration: 0.000324
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1026
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_Seq5][suite]
+    - id: 1028
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_C_Seq5/[c_ater.c_math.Editor.Tests][Test_C_Seq5.Test_C_Seq5Creation]
+      name: Test_C_Seq5Creation
+      fullName: Test_C_Seq5.Test_C_Seq5Creation
+      resultStatus: 1
+      duration: 0.0002284
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1026
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_Seq5][suite]
+    - id: 1035
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_C_Seq5/[c_ater.c_math.Editor.Tests][Test_C_Seq5.Test_C_Seq5GetElement]
+      name: Test_C_Seq5GetElement
+      fullName: Test_C_Seq5.Test_C_Seq5GetElement
+      resultStatus: 1
+      duration: 0.0002662
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1026
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_Seq5][suite]
+    - id: 1051
+      uniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_Seq5_Shorthand][suite]
+      name: Test_C_Seq5_Shorthand
+      fullName: Test_C_Seq5_Shorthand
+      resultStatus: 1
+      duration: 0.0043376
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1099
+      parentUniqueId: '[c_ater.c_math.Editor.Tests][C:/Users/Chesh/OneDrive/Documents/GitHub/CatMathAPI/2D
+        Math Practise/Library/ScriptAssemblies/c_ater.c_math.Editor.Tests.dll][suite]'
+    - id: 1057
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_C_Seq5_Shorthand/[c_ater.c_math.Editor.Tests][Test_C_Seq5_Shorthand.Test_C_Seq5Shorthand_SeqK]
+      name: Test_C_Seq5Shorthand_SeqK
+      fullName: Test_C_Seq5_Shorthand.Test_C_Seq5Shorthand_SeqK
+      resultStatus: 1
+      duration: 0.0002065
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1051
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_Seq5_Shorthand][suite]
+    - id: 1056
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_C_Seq5_Shorthand/[c_ater.c_math.Editor.Tests][Test_C_Seq5_Shorthand.Test_C_Seq5Shorthand_SeqW]
+      name: Test_C_Seq5Shorthand_SeqW
+      fullName: Test_C_Seq5_Shorthand.Test_C_Seq5Shorthand_SeqW
+      resultStatus: 1
+      duration: 0.0001374
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1051
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_Seq5_Shorthand][suite]
+    - id: 1053
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_C_Seq5_Shorthand/[c_ater.c_math.Editor.Tests][Test_C_Seq5_Shorthand.Test_C_Seq5Shorthand_SeqX]
+      name: Test_C_Seq5Shorthand_SeqX
+      fullName: Test_C_Seq5_Shorthand.Test_C_Seq5Shorthand_SeqX
+      resultStatus: 1
+      duration: 0.0001185
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1051
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_Seq5_Shorthand][suite]
+    - id: 1054
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_C_Seq5_Shorthand/[c_ater.c_math.Editor.Tests][Test_C_Seq5_Shorthand.Test_C_Seq5Shorthand_SeqY]
+      name: Test_C_Seq5Shorthand_SeqY
+      fullName: Test_C_Seq5_Shorthand.Test_C_Seq5Shorthand_SeqY
+      resultStatus: 1
+      duration: 0.000115
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1051
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_Seq5_Shorthand][suite]
+    - id: 1055
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_C_Seq5_Shorthand/[c_ater.c_math.Editor.Tests][Test_C_Seq5_Shorthand.Test_C_Seq5Shorthand_SeqZ]
+      name: Test_C_Seq5Shorthand_SeqZ
+      fullName: Test_C_Seq5_Shorthand.Test_C_Seq5Shorthand_SeqZ
+      resultStatus: 1
+      duration: 0.0001719
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1051
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_Seq5_Shorthand][suite]
+    - id: 1052
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_C_Seq5_Shorthand/[c_ater.c_math.Editor.Tests][Test_C_Seq5_Shorthand.Test_C_Seq5Shorthand_Zero]
+      name: Test_C_Seq5Shorthand_Zero
+      fullName: Test_C_Seq5_Shorthand.Test_C_Seq5Shorthand_Zero
+      resultStatus: 1
+      duration: 0.0001229
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1051
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_Seq5_Shorthand][suite]
+    - id: 1113
+      uniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_Vec3_Funcs][suite]
+      name: Test_C_Vec3_Funcs
+      fullName: Test_C_Vec3_Funcs
+      resultStatus: 2
+      duration: 0.0123414
+      messages: One or more child tests had errors
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1140
+      parentUniqueId: '[c_ater.c_math.Editor.Tests][C:/Users/Chesh/OneDrive/Documents/GitHub/CatMathAPI/2D
+        Math Practise/Library/ScriptAssemblies/c_ater.c_math.Editor.Tests.dll][suite]'
+    - id: 1119
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_C_Vec3_Funcs/[c_ater.c_math.Editor.Tests][Test_C_Vec3_Funcs.Test_C_Vec3_Abs]
+      name: Test_C_Vec3_Abs
+      fullName: Test_C_Vec3_Funcs.Test_C_Vec3_Abs
+      resultStatus: 1
+      duration: 0.000696
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1113
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_Vec3_Funcs][suite]
+    - id: 1123
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_C_Vec3_Funcs/[c_ater.c_math.Editor.Tests][Test_C_Vec3_Funcs.Test_C_Vec3_AngleBetween]
+      name: Test_C_Vec3_AngleBetween
+      fullName: Test_C_Vec3_Funcs.Test_C_Vec3_AngleBetween
+      resultStatus: 2
+      duration: 0.0042195
+      messages: "  Expected: 60.000000000000007d\r\n  But was:  0.0f\r\n"
+      output: '180
+
+'
+      stacktrace: 'at Test_C_Vec3_Funcs.Test_C_Vec3_AngleBetween () [0x000c7] in
+        .\Packages\C_Math\Tests\Editor\c_ater.c_math.Editor.Tests\C_Vec\C_Vec3\Test_C_Vec3_Funcs.cs:282
+
+'
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1113
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_Vec3_Funcs][suite]
+    - id: 1118
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_C_Vec3_Funcs/[c_ater.c_math.Editor.Tests][Test_C_Vec3_Funcs.Test_C_Vec3_Clamp]
+      name: Test_C_Vec3_Clamp
+      fullName: Test_C_Vec3_Funcs.Test_C_Vec3_Clamp
+      resultStatus: 1
+      duration: 0.0006799
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1113
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_Vec3_Funcs][suite]
+    - id: 1115
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_C_Vec3_Funcs/[c_ater.c_math.Editor.Tests][Test_C_Vec3_Funcs.Test_C_Vec3_CopyTo]
+      name: Test_C_Vec3_CopyTo
+      fullName: Test_C_Vec3_Funcs.Test_C_Vec3_CopyTo
+      resultStatus: 1
+      duration: 0.0003199
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1113
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_Vec3_Funcs][suite]
+    - id: 1121
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_C_Vec3_Funcs/[c_ater.c_math.Editor.Tests][Test_C_Vec3_Funcs.Test_C_Vec3_DotProduct]
+      name: Test_C_Vec3_DotProduct
+      fullName: Test_C_Vec3_Funcs.Test_C_Vec3_DotProduct
+      resultStatus: 1
+      duration: 0.0002765
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1113
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_Vec3_Funcs][suite]
+    - id: 1117
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_C_Vec3_Funcs/[c_ater.c_math.Editor.Tests][Test_C_Vec3_Funcs.Test_C_Vec3_Max]
+      name: Test_C_Vec3_Max
+      fullName: Test_C_Vec3_Funcs.Test_C_Vec3_Max
+      resultStatus: 1
+      duration: 0.0002917
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1113
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_Vec3_Funcs][suite]
+    - id: 1116
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_C_Vec3_Funcs/[c_ater.c_math.Editor.Tests][Test_C_Vec3_Funcs.Test_C_Vec3_Min]
+      name: Test_C_Vec3_Min
+      fullName: Test_C_Vec3_Funcs.Test_C_Vec3_Min
+      resultStatus: 1
+      duration: 0.0002769
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1113
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_Vec3_Funcs][suite]
+    - id: 1120
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_C_Vec3_Funcs/[c_ater.c_math.Editor.Tests][Test_C_Vec3_Funcs.Test_C_Vec3_Normalize]
+      name: Test_C_Vec3_Normalize
+      fullName: Test_C_Vec3_Funcs.Test_C_Vec3_Normalize
+      resultStatus: 1
+      duration: 0.0003531
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1113
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_Vec3_Funcs][suite]
+    - id: 1122
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_C_Vec3_Funcs/[c_ater.c_math.Editor.Tests][Test_C_Vec3_Funcs.Test_C_Vec3_NormDotProduct]
+      name: Test_C_Vec3_NormDotProduct
+      fullName: Test_C_Vec3_Funcs.Test_C_Vec3_NormDotProduct
+      resultStatus: 2
+      duration: 0.000661
+      messages: "  Expected: -1\r\n  But was:  -0.333333313f\r\n"
+      output: 
+      stacktrace: 'at Test_C_Vec3_Funcs.Test_C_Vec3_NormDotProduct () [0x0002c] in
+        .\Packages\C_Math\Tests\Editor\c_ater.c_math.Editor.Tests\C_Vec\C_Vec3\Test_C_Vec3_Funcs.cs:261
+
+'
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1113
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_Vec3_Funcs][suite]
+    - id: 1114
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_C_Vec3_Funcs/[c_ater.c_math.Editor.Tests][Test_C_Vec3_Funcs.Test_C_Vec3_Set]
+      name: Test_C_Vec3_Set
+      fullName: Test_C_Vec3_Funcs.Test_C_Vec3_Set
+      resultStatus: 1
+      duration: 0.0004416
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1113
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_Vec3_Funcs][suite]
+    - id: 1124
+      uniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_Vec3_Operators][suite]
+      name: Test_C_Vec3_Operators
+      fullName: Test_C_Vec3_Operators
+      resultStatus: 1
+      duration: 0.0059065
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1140
+      parentUniqueId: '[c_ater.c_math.Editor.Tests][C:/Users/Chesh/OneDrive/Documents/GitHub/CatMathAPI/2D
+        Math Practise/Library/ScriptAssemblies/c_ater.c_math.Editor.Tests.dll][suite]'
+    - id: 1125
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_C_Vec3_Operators/[c_ater.c_math.Editor.Tests][Test_C_Vec3_Operators.Test_C_Vec3_AdditionCVec3]
+      name: Test_C_Vec3_AdditionCVec3
+      fullName: Test_C_Vec3_Operators.Test_C_Vec3_AdditionCVec3
+      resultStatus: 1
+      duration: 0.0003592
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1124
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_Vec3_Operators][suite]
+    - id: 1130
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_C_Vec3_Operators/[c_ater.c_math.Editor.Tests][Test_C_Vec3_Operators.Test_C_Vec3_Equals]
+      name: Test_C_Vec3_Equals
+      fullName: Test_C_Vec3_Operators.Test_C_Vec3_Equals
+      resultStatus: 1
+      duration: 0.0004607
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1124
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_Vec3_Operators][suite]
+    - id: 1127
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_C_Vec3_Operators/[c_ater.c_math.Editor.Tests][Test_C_Vec3_Operators.Test_C_Vec3_MultiplicationCVec3]
+      name: Test_C_Vec3_MultiplicationCVec3
+      fullName: Test_C_Vec3_Operators.Test_C_Vec3_MultiplicationCVec3
+      resultStatus: 1
+      duration: 0.0002759
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1124
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_Vec3_Operators][suite]
+    - id: 1128
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_C_Vec3_Operators/[c_ater.c_math.Editor.Tests][Test_C_Vec3_Operators.Test_C_Vec3_MultiplicationFloatCVec3]
+      name: Test_C_Vec3_MultiplicationFloatCVec3
+      fullName: Test_C_Vec3_Operators.Test_C_Vec3_MultiplicationFloatCVec3
+      resultStatus: 1
+      duration: 0.0002307
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1124
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_Vec3_Operators][suite]
+    - id: 1129
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_C_Vec3_Operators/[c_ater.c_math.Editor.Tests][Test_C_Vec3_Operators.Test_C_Vec3_MultiplicationIntCVec3]
+      name: Test_C_Vec3_MultiplicationIntCVec3
+      fullName: Test_C_Vec3_Operators.Test_C_Vec3_MultiplicationIntCVec3
+      resultStatus: 1
+      duration: 0.0001833
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1124
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_Vec3_Operators][suite]
+    - id: 1131
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_C_Vec3_Operators/[c_ater.c_math.Editor.Tests][Test_C_Vec3_Operators.Test_C_Vec3_NotEquals]
+      name: Test_C_Vec3_NotEquals
+      fullName: Test_C_Vec3_Operators.Test_C_Vec3_NotEquals
+      resultStatus: 1
+      duration: 0.0002532
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1124
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_Vec3_Operators][suite]
+    - id: 1126
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_C_Vec3_Operators/[c_ater.c_math.Editor.Tests][Test_C_Vec3_Operators.Test_C_Vec3_SubtractionCVec3]
+      name: Test_C_Vec3_SubtractionCVec3
+      fullName: Test_C_Vec3_Operators.Test_C_Vec3_SubtractionCVec3
+      resultStatus: 1
+      duration: 0.0002417
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1124
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_Vec3_Operators][suite]
+    - id: 1132
+      uniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_Vec3_Properties][suite]
+      name: Test_C_Vec3_Properties
+      fullName: Test_C_Vec3_Properties
+      resultStatus: 1
+      duration: 0.0035045
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1140
+      parentUniqueId: '[c_ater.c_math.Editor.Tests][C:/Users/Chesh/OneDrive/Documents/GitHub/CatMathAPI/2D
+        Math Practise/Library/ScriptAssemblies/c_ater.c_math.Editor.Tests.dll][suite]'
+    - id: 1134
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_C_Vec3_Properties/[c_ater.c_math.Editor.Tests][Test_C_Vec3_Properties.Test_C_Vec3ElementSetting]
+      name: Test_C_Vec3ElementSetting
+      fullName: Test_C_Vec3_Properties.Test_C_Vec3ElementSetting
+      resultStatus: 1
+      duration: 0.0002205
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1132
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_Vec3_Properties][suite]
+    - id: 1133
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_C_Vec3_Properties/[c_ater.c_math.Editor.Tests][Test_C_Vec3_Properties.Test_C_Vec3SimplePasses]
+      name: Test_C_Vec3SimplePasses
+      fullName: Test_C_Vec3_Properties.Test_C_Vec3SimplePasses
+      resultStatus: 1
+      duration: 0.0001016
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1132
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_Vec3_Properties][suite]
+    - id: 1113
+      uniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_Vec3_Shorthand][suite]
+      name: Test_C_Vec3_Shorthand
+      fullName: Test_C_Vec3_Shorthand
+      resultStatus: 1
+      duration: 0.0046336
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1140
+      parentUniqueId: '[c_ater.c_math.Editor.Tests][C:/Users/Chesh/OneDrive/Documents/GitHub/CatMathAPI/2D
+        Math Practise/Library/ScriptAssemblies/c_ater.c_math.Editor.Tests.dll][suite]'
+    - id: 1121
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_C_Vec3_Shorthand/[c_ater.c_math.Editor.Tests][Test_C_Vec3_Shorthand.Test_C_Vec3_BCK]
+      name: Test_C_Vec3_BCK
+      fullName: Test_C_Vec3_Shorthand.Test_C_Vec3_BCK
+      resultStatus: 1
+      duration: 0.0001624
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1113
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_Vec3_Shorthand][suite]
+    - id: 1119
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_C_Vec3_Shorthand/[c_ater.c_math.Editor.Tests][Test_C_Vec3_Shorthand.Test_C_Vec3_Down]
+      name: Test_C_Vec3_Down
+      fullName: Test_C_Vec3_Shorthand.Test_C_Vec3_Down
+      resultStatus: 1
+      duration: 0.0001245
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1113
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_Vec3_Shorthand][suite]
+    - id: 1120
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_C_Vec3_Shorthand/[c_ater.c_math.Editor.Tests][Test_C_Vec3_Shorthand.Test_C_Vec3_FWD]
+      name: Test_C_Vec3_FWD
+      fullName: Test_C_Vec3_Shorthand.Test_C_Vec3_FWD
+      resultStatus: 1
+      duration: 0.0001259
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1113
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_Vec3_Shorthand][suite]
+    - id: 1117
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_C_Vec3_Shorthand/[c_ater.c_math.Editor.Tests][Test_C_Vec3_Shorthand.Test_C_Vec3_Left]
+      name: Test_C_Vec3_Left
+      fullName: Test_C_Vec3_Shorthand.Test_C_Vec3_Left
+      resultStatus: 1
+      duration: 0.0001054
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1113
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_Vec3_Shorthand][suite]
+    - id: 1123
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_C_Vec3_Shorthand/[c_ater.c_math.Editor.Tests][Test_C_Vec3_Shorthand.Test_C_Vec3_NegInfin]
+      name: Test_C_Vec3_NegInfin
+      fullName: Test_C_Vec3_Shorthand.Test_C_Vec3_NegInfin
+      resultStatus: 1
+      duration: 0.0001097
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1113
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_Vec3_Shorthand][suite]
+    - id: 1114
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_C_Vec3_Shorthand/[c_ater.c_math.Editor.Tests][Test_C_Vec3_Shorthand.Test_C_Vec3_One]
+      name: Test_C_Vec3_One
+      fullName: Test_C_Vec3_Shorthand.Test_C_Vec3_One
+      resultStatus: 1
+      duration: 0.0000937
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1113
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_Vec3_Shorthand][suite]
+    - id: 1122
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_C_Vec3_Shorthand/[c_ater.c_math.Editor.Tests][Test_C_Vec3_Shorthand.Test_C_Vec3_PosInfin]
+      name: Test_C_Vec3_PosInfin
+      fullName: Test_C_Vec3_Shorthand.Test_C_Vec3_PosInfin
+      resultStatus: 1
+      duration: 0.000094
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1113
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_Vec3_Shorthand][suite]
+    - id: 1116
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_C_Vec3_Shorthand/[c_ater.c_math.Editor.Tests][Test_C_Vec3_Shorthand.Test_C_Vec3_Right]
+      name: Test_C_Vec3_Right
+      fullName: Test_C_Vec3_Shorthand.Test_C_Vec3_Right
+      resultStatus: 1
+      duration: 0.0000857
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1113
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_Vec3_Shorthand][suite]
+    - id: 1118
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_C_Vec3_Shorthand/[c_ater.c_math.Editor.Tests][Test_C_Vec3_Shorthand.Test_C_Vec3_Up]
+      name: Test_C_Vec3_Up
+      fullName: Test_C_Vec3_Shorthand.Test_C_Vec3_Up
+      resultStatus: 1
+      duration: 0.0000827
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1113
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_Vec3_Shorthand][suite]
+    - id: 1115
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_C_Vec3_Shorthand/[c_ater.c_math.Editor.Tests][Test_C_Vec3_Shorthand.Test_C_Vec3_Zero]
+      name: Test_C_Vec3_Zero
+      fullName: Test_C_Vec3_Shorthand.Test_C_Vec3_Zero
+      resultStatus: 1
+      duration: 0.0000844
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1113
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_Vec3_Shorthand][suite]
+    - id: 1135
+      uniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_Vec3_Utils][suite]
+      name: Test_C_Vec3_Utils
+      fullName: Test_C_Vec3_Utils
+      resultStatus: 1
+      duration: 0.0038107
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1140
+      parentUniqueId: '[c_ater.c_math.Editor.Tests][C:/Users/Chesh/OneDrive/Documents/GitHub/CatMathAPI/2D
+        Math Practise/Library/ScriptAssemblies/c_ater.c_math.Editor.Tests.dll][suite]'
+    - id: 1139
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_C_Vec3_Utils/[c_ater.c_math.Editor.Tests][Test_C_Vec3_Utils.Test_C_Vec3_Prop_Normalized]
+      name: Test_C_Vec3_Prop_Normalized
+      fullName: Test_C_Vec3_Utils.Test_C_Vec3_Prop_Normalized
+      resultStatus: 1
+      duration: 0.0003615
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1135
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_Vec3_Utils][suite]
+    - id: 1138
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_C_Vec3_Utils/[c_ater.c_math.Editor.Tests][Test_C_Vec3_Utils.Test_C_Vec3ElementSetting]
+      name: Test_C_Vec3ElementSetting
+      fullName: Test_C_Vec3_Utils.Test_C_Vec3ElementSetting
+      resultStatus: 1
+      duration: 0.0001646
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1135
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_Vec3_Utils][suite]
+    - id: 1137
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_C_Vec3_Utils/[c_ater.c_math.Editor.Tests][Test_C_Vec3_Utils.Test_C_Vec3Init]
+      name: Test_C_Vec3Init
+      fullName: Test_C_Vec3_Utils.Test_C_Vec3Init
+      resultStatus: 1
+      duration: 0.0001147
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1135
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_Vec3_Utils][suite]
+    - id: 1136
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_C_Vec3_Utils/[c_ater.c_math.Editor.Tests][Test_C_Vec3_Utils.Test_C_Vec3SimplePasses]
+      name: Test_C_Vec3SimplePasses
+      fullName: Test_C_Vec3_Utils.Test_C_Vec3SimplePasses
+      resultStatus: 1
+      duration: 0.0000887
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1135
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_C_Vec3_Utils][suite]
+    - id: 1061
+      uniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_CVec2_Funcs][suite]
+      name: Test_CVec2_Funcs
+      fullName: Test_CVec2_Funcs
+      resultStatus: 1
+      duration: 0.2140653
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1081
+      parentUniqueId: '[c_ater.c_math.Editor.Tests][C:/Users/Chesh/OneDrive/Documents/GitHub/CatMathAPI/2D
+        Math Practise/Library/ScriptAssemblies/c_ater.c_math.Editor.Tests.dll][suite]'
+    - id: 1067
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_CVec2_Funcs/[c_ater.c_math.Editor.Tests][Test_CVec2_Funcs.Test_C_Vec2_Abs]
+      name: Test_C_Vec2_Abs
+      fullName: Test_CVec2_Funcs.Test_C_Vec2_Abs
+      resultStatus: 1
+      duration: 0.0005843
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1061
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_CVec2_Funcs][suite]
+    - id: 1095
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_CVec2_Funcs/[c_ater.c_math.Editor.Tests][Test_CVec2_Funcs.Test_C_Vec2_AngleBetweenDeg]
+      name: Test_C_Vec2_AngleBetweenDeg
+      fullName: Test_CVec2_Funcs.Test_C_Vec2_AngleBetweenDeg
+      resultStatus: 1
+      duration: 0.0005647
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1084
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_CVec2_Funcs][suite]
+    - id: 1094
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_CVec2_Funcs/[c_ater.c_math.Editor.Tests][Test_CVec2_Funcs.Test_C_Vec2_AngleBetweenRad]
+      name: Test_C_Vec2_AngleBetweenRad
+      fullName: Test_CVec2_Funcs.Test_C_Vec2_AngleBetweenRad
+      resultStatus: 1
+      duration: 0.0003985
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1084
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_CVec2_Funcs][suite]
+    - id: 1066
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_CVec2_Funcs/[c_ater.c_math.Editor.Tests][Test_CVec2_Funcs.Test_C_Vec2_Clamp]
+      name: Test_C_Vec2_Clamp
+      fullName: Test_CVec2_Funcs.Test_C_Vec2_Clamp
+      resultStatus: 1
+      duration: 0.0003137
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1061
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_CVec2_Funcs][suite]
+    - id: 1063
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_CVec2_Funcs/[c_ater.c_math.Editor.Tests][Test_CVec2_Funcs.Test_C_Vec2_CopyTo]
+      name: Test_C_Vec2_CopyTo
+      fullName: Test_CVec2_Funcs.Test_C_Vec2_CopyTo
+      resultStatus: 1
+      duration: 0.0001951
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1061
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_CVec2_Funcs][suite]
+    - id: 1096
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_CVec2_Funcs/[c_ater.c_math.Editor.Tests][Test_CVec2_Funcs.Test_C_Vec2_CrossProduct]
+      name: Test_C_Vec2_CrossProduct
+      fullName: Test_CVec2_Funcs.Test_C_Vec2_CrossProduct
+      resultStatus: 2
+      duration: 0.0006635
+      messages: "  Expected: 72.0f\r\n  But was:  0.0f\r\n"
+      output: 
+      stacktrace: 'at Test_CVec2_Funcs.Test_C_Vec2_CrossProduct () [0x0003d] in .\Packages\C_Math\Tests\Editor\c_ater.c_math.Editor.Tests\C_Vec\C_Vec2\Test_C_Vec2_Functions.cs:210
+
+'
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1084
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_CVec2_Funcs][suite]
+    - id: 1069
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_CVec2_Funcs/[c_ater.c_math.Editor.Tests][Test_CVec2_Funcs.Test_C_Vec2_DotProduct]
+      name: Test_C_Vec2_DotProduct
+      fullName: Test_CVec2_Funcs.Test_C_Vec2_DotProduct
+      resultStatus: 1
+      duration: 0.0002518
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1061
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_CVec2_Funcs][suite]
+    - id: 1065
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_CVec2_Funcs/[c_ater.c_math.Editor.Tests][Test_CVec2_Funcs.Test_C_Vec2_Max]
+      name: Test_C_Vec2_Max
+      fullName: Test_CVec2_Funcs.Test_C_Vec2_Max
+      resultStatus: 1
+      duration: 0.0002163
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1061
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_CVec2_Funcs][suite]
+    - id: 1064
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_CVec2_Funcs/[c_ater.c_math.Editor.Tests][Test_CVec2_Funcs.Test_C_Vec2_Min]
+      name: Test_C_Vec2_Min
+      fullName: Test_CVec2_Funcs.Test_C_Vec2_Min
+      resultStatus: 1
+      duration: 0.0001937
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1061
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_CVec2_Funcs][suite]
+    - id: 1068
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_CVec2_Funcs/[c_ater.c_math.Editor.Tests][Test_CVec2_Funcs.Test_C_Vec2_Normalize]
+      name: Test_C_Vec2_Normalize
+      fullName: Test_CVec2_Funcs.Test_C_Vec2_Normalize
+      resultStatus: 1
+      duration: 0.0002375
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1061
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_CVec2_Funcs][suite]
+    - id: 1070
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_CVec2_Funcs/[c_ater.c_math.Editor.Tests][Test_CVec2_Funcs.Test_C_Vec2_NormDotProduct]
+      name: Test_C_Vec2_NormDotProduct
+      fullName: Test_CVec2_Funcs.Test_C_Vec2_NormDotProduct
+      resultStatus: 1
+      duration: 0.0002823
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1061
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_CVec2_Funcs][suite]
+    - id: 1062
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_CVec2_Funcs/[c_ater.c_math.Editor.Tests][Test_CVec2_Funcs.Test_C_Vec2_Set]
+      name: Test_C_Vec2_Set
+      fullName: Test_CVec2_Funcs.Test_C_Vec2_Set
+      resultStatus: 1
+      duration: 0.0001424
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1061
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_CVec2_Funcs][suite]
+    - id: 1097
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_CVec2_Funcs/[c_ater.c_math.Editor.Tests][Test_CVec2_Funcs.Test_C_Vec2_VectorProjection]
+      name: Test_C_Vec2_VectorProjection
+      fullName: Test_CVec2_Funcs.Test_C_Vec2_VectorProjection
+      resultStatus: 1
+      duration: 0.1118123
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1084
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_CVec2_Funcs][suite]
+    - id: 1072
+      uniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_CVec2_Operators][suite]
+      name: Test_CVec2_Operators
+      fullName: Test_CVec2_Operators
+      resultStatus: 1
+      duration: 0.0064809
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1098
+      parentUniqueId: '[c_ater.c_math.Editor.Tests][C:/Users/Chesh/OneDrive/Documents/GitHub/CatMathAPI/2D
+        Math Practise/Library/ScriptAssemblies/c_ater.c_math.Editor.Tests.dll][suite]'
+    - id: 1073
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_CVec2_Operators/[c_ater.c_math.Editor.Tests][Test_CVec2_Operators.Test_C_Vec2_AdditionCVec2]
+      name: Test_C_Vec2_AdditionCVec2
+      fullName: Test_CVec2_Operators.Test_C_Vec2_AdditionCVec2
+      resultStatus: 1
+      duration: 0.0003345
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1072
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_CVec2_Operators][suite]
+    - id: 1074
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_CVec2_Operators/[c_ater.c_math.Editor.Tests][Test_CVec2_Operators.Test_C_Vec2_AdditionPoint2D]
+      name: Test_C_Vec2_AdditionPoint2D
+      fullName: Test_CVec2_Operators.Test_C_Vec2_AdditionPoint2D
+      resultStatus: 1
+      duration: 0.0004227
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1072
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_CVec2_Operators][suite]
+    - id: 1079
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_CVec2_Operators/[c_ater.c_math.Editor.Tests][Test_CVec2_Operators.Test_C_Vec2_Equals]
+      name: Test_C_Vec2_Equals
+      fullName: Test_CVec2_Operators.Test_C_Vec2_Equals
+      resultStatus: 1
+      duration: 0.0002547
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1072
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_CVec2_Operators][suite]
+    - id: 1076
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_CVec2_Operators/[c_ater.c_math.Editor.Tests][Test_CVec2_Operators.Test_C_Vec2_MultiplicationCVec2]
+      name: Test_C_Vec2_MultiplicationCVec2
+      fullName: Test_CVec2_Operators.Test_C_Vec2_MultiplicationCVec2
+      resultStatus: 1
+      duration: 0.0002566
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1072
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_CVec2_Operators][suite]
+    - id: 1077
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_CVec2_Operators/[c_ater.c_math.Editor.Tests][Test_CVec2_Operators.Test_C_Vec2_MultiplicationFloatCVec2]
+      name: Test_C_Vec2_MultiplicationFloatCVec2
+      fullName: Test_CVec2_Operators.Test_C_Vec2_MultiplicationFloatCVec2
+      resultStatus: 1
+      duration: 0.0001897
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1072
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_CVec2_Operators][suite]
+    - id: 1078
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_CVec2_Operators/[c_ater.c_math.Editor.Tests][Test_CVec2_Operators.Test_C_Vec2_MultiplicationIntCVec2]
+      name: Test_C_Vec2_MultiplicationIntCVec2
+      fullName: Test_CVec2_Operators.Test_C_Vec2_MultiplicationIntCVec2
+      resultStatus: 1
+      duration: 0.0002168
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1072
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_CVec2_Operators][suite]
+    - id: 1080
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_CVec2_Operators/[c_ater.c_math.Editor.Tests][Test_CVec2_Operators.Test_C_Vec2_NotEquals]
+      name: Test_C_Vec2_NotEquals
+      fullName: Test_CVec2_Operators.Test_C_Vec2_NotEquals
+      resultStatus: 1
+      duration: 0.0002609
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1072
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_CVec2_Operators][suite]
+    - id: 1075
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_CVec2_Operators/[c_ater.c_math.Editor.Tests][Test_CVec2_Operators.Test_C_Vec2_SubtractionCVec2]
+      name: Test_C_Vec2_SubtractionCVec2
+      fullName: Test_CVec2_Operators.Test_C_Vec2_SubtractionCVec2
+      resultStatus: 1
+      duration: 0.0002324
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1072
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_CVec2_Operators][suite]
+    - id: 1081
+      uniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_CVec2_Properties][suite]
+      name: Test_CVec2_Properties
+      fullName: Test_CVec2_Properties
+      resultStatus: 1
+      duration: 0.0043278
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1098
+      parentUniqueId: '[c_ater.c_math.Editor.Tests][C:/Users/Chesh/OneDrive/Documents/GitHub/CatMathAPI/2D
+        Math Practise/Library/ScriptAssemblies/c_ater.c_math.Editor.Tests.dll][suite]'
+    - id: 1083
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_CVec2_Properties/[c_ater.c_math.Editor.Tests][Test_CVec2_Properties.Test_C_Vec2ElementSetting]
+      name: Test_C_Vec2ElementSetting
+      fullName: Test_CVec2_Properties.Test_C_Vec2ElementSetting
+      resultStatus: 1
+      duration: 0.0002338
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1081
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_CVec2_Properties][suite]
+    - id: 1082
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_CVec2_Properties/[c_ater.c_math.Editor.Tests][Test_CVec2_Properties.Test_C_Vec2SimplePasses]
+      name: Test_C_Vec2SimplePasses
+      fullName: Test_CVec2_Properties.Test_C_Vec2SimplePasses
+      resultStatus: 1
+      duration: 0.0001043
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1081
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_CVec2_Properties][suite]
+    - id: 1061
+      uniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_CVec2_Shorthand][suite]
+      name: Test_CVec2_Shorthand
+      fullName: Test_CVec2_Shorthand
+      resultStatus: 1
+      duration: 0.0047631
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1070
+      parentUniqueId: '[c_ater.c_math.Editor.Tests][C:/Users/Chesh/OneDrive/Documents/GitHub/CatMathAPI/2D
+        Math Practise/Library/ScriptAssemblies/c_ater.c_math.Editor.Tests.dll][suite]'
+    - id: 1067
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_CVec2_Shorthand/[c_ater.c_math.Editor.Tests][Test_CVec2_Shorthand.Test_C_Vec2_Down]
+      name: Test_C_Vec2_Down
+      fullName: Test_CVec2_Shorthand.Test_C_Vec2_Down
+      resultStatus: 1
+      duration: 0.0001855
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1061
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_CVec2_Shorthand][suite]
+    - id: 1065
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_CVec2_Shorthand/[c_ater.c_math.Editor.Tests][Test_CVec2_Shorthand.Test_C_Vec2_Left]
+      name: Test_C_Vec2_Left
+      fullName: Test_CVec2_Shorthand.Test_C_Vec2_Left
+      resultStatus: 1
+      duration: 0.0001296
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1061
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_CVec2_Shorthand][suite]
+    - id: 1069
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_CVec2_Shorthand/[c_ater.c_math.Editor.Tests][Test_CVec2_Shorthand.Test_C_Vec2_NegInfin]
+      name: Test_C_Vec2_NegInfin
+      fullName: Test_CVec2_Shorthand.Test_C_Vec2_NegInfin
+      resultStatus: 1
+      duration: 0.0001143
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1061
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_CVec2_Shorthand][suite]
+    - id: 1062
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_CVec2_Shorthand/[c_ater.c_math.Editor.Tests][Test_CVec2_Shorthand.Test_C_Vec2_One]
+      name: Test_C_Vec2_One
+      fullName: Test_CVec2_Shorthand.Test_C_Vec2_One
+      resultStatus: 1
+      duration: 0.0001006
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1061
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_CVec2_Shorthand][suite]
+    - id: 1068
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_CVec2_Shorthand/[c_ater.c_math.Editor.Tests][Test_CVec2_Shorthand.Test_C_Vec2_PosInfin]
+      name: Test_C_Vec2_PosInfin
+      fullName: Test_CVec2_Shorthand.Test_C_Vec2_PosInfin
+      resultStatus: 1
+      duration: 0.0001321
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1061
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_CVec2_Shorthand][suite]
+    - id: 1064
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_CVec2_Shorthand/[c_ater.c_math.Editor.Tests][Test_CVec2_Shorthand.Test_C_Vec2_Right]
+      name: Test_C_Vec2_Right
+      fullName: Test_CVec2_Shorthand.Test_C_Vec2_Right
+      resultStatus: 1
+      duration: 0.0000959
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1061
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_CVec2_Shorthand][suite]
+    - id: 1066
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_CVec2_Shorthand/[c_ater.c_math.Editor.Tests][Test_CVec2_Shorthand.Test_C_Vec2_Up]
+      name: Test_C_Vec2_Up
+      fullName: Test_CVec2_Shorthand.Test_C_Vec2_Up
+      resultStatus: 1
+      duration: 0.0001216
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1061
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_CVec2_Shorthand][suite]
+    - id: 1063
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_CVec2_Shorthand/[c_ater.c_math.Editor.Tests][Test_CVec2_Shorthand.Test_C_Vec2_Zero]
+      name: Test_C_Vec2_Zero
+      fullName: Test_CVec2_Shorthand.Test_C_Vec2_Zero
+      resultStatus: 1
+      duration: 0.0000992
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1061
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_CVec2_Shorthand][suite]
+    - id: 1084
+      uniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_CVec2_Utils][suite]
+      name: Test_CVec2_Utils
+      fullName: Test_CVec2_Utils
+      resultStatus: 1
+      duration: 0.0040122
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1098
+      parentUniqueId: '[c_ater.c_math.Editor.Tests][C:/Users/Chesh/OneDrive/Documents/GitHub/CatMathAPI/2D
+        Math Practise/Library/ScriptAssemblies/c_ater.c_math.Editor.Tests.dll][suite]'
+    - id: 1088
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_CVec2_Utils/[c_ater.c_math.Editor.Tests][Test_CVec2_Utils.Test_C_Vec2_Prop_Normalized]
+      name: Test_C_Vec2_Prop_Normalized
+      fullName: Test_CVec2_Utils.Test_C_Vec2_Prop_Normalized
+      resultStatus: 1
+      duration: 0.000382
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1084
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_CVec2_Utils][suite]
+    - id: 1087
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_CVec2_Utils/[c_ater.c_math.Editor.Tests][Test_CVec2_Utils.Test_C_Vec2ElementSetting]
+      name: Test_C_Vec2ElementSetting
+      fullName: Test_CVec2_Utils.Test_C_Vec2ElementSetting
+      resultStatus: 1
+      duration: 0.0001603
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1084
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_CVec2_Utils][suite]
+    - id: 1086
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_CVec2_Utils/[c_ater.c_math.Editor.Tests][Test_CVec2_Utils.Test_C_Vec2Init]
+      name: Test_C_Vec2Init
+      fullName: Test_CVec2_Utils.Test_C_Vec2Init
+      resultStatus: 1
+      duration: 0.0001165
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1084
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_CVec2_Utils][suite]
+    - id: 1085
+      uniqueId: c_ater.c_math.Editor.Tests.dll/Test_CVec2_Utils/[c_ater.c_math.Editor.Tests][Test_CVec2_Utils.Test_C_Vec2SimplePasses]
+      name: Test_C_Vec2SimplePasses
+      fullName: Test_CVec2_Utils.Test_C_Vec2SimplePasses
+      resultStatus: 1
+      duration: 0.0000887
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1084
+      parentUniqueId: c_ater.c_math.Editor.Tests.dll/[c_ater.c_math.Editor.Tests][Test_CVec2_Utils][suite]
+    m_ResultText: Test_C_Vec2_VectorProjection (0.112s)
+    m_ResultStacktrace: 
+    m_TestListState:
+      scrollPos: {x: 0, y: 443}
+      m_SelectedIDs: 6c24fc02
+      m_LastClickedID: 50078828
+      m_ExpandedIDs: d0c0cd874b3b278b5da277b8fef247b93d40ffba77f91fbe63f1dbc861942fd17714eef6f329223441f6a56af739316cffffff7f
+      m_RenameOverlay:
+        m_UserAcceptedRename: 0
+        m_Name: 
+        m_OriginalName: 
+        m_EditFieldRect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        m_UserData: 0
+        m_IsWaitingForDelay: 0
+        m_IsRenaming: 0
+        m_OriginalEventType: 11
+        m_IsRenamingFilename: 0
+        m_ClientGUIView: {fileID: 0}
+      m_SearchString: 
+    m_TestRunnerUIFilter:
+      PassedHidden: 0
+      FailedHidden: 0
+      NotRunHidden: 0
+      m_SearchString: 
+      selectedCategoryMask: 0
+      availableCategories:
+      - Uncategorized
+--- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -296,10 +3149,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1544
-    y: 656
-    width: 845
-    height: 375
+    x: 1537
+    y: 660
+    width: 482
+    height: 378
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -311,7 +3164,7 @@ MonoBehaviour:
     m_SaveData: []
     m_OverlaysVisible: 1
   m_SearchFilter:
-    m_NameFilter: C_Math
+    m_NameFilter: 
     m_ClassNames: []
     m_AssetLabels: []
     m_AssetBundleNames: []
@@ -321,25 +3174,25 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/Scripts
     m_Globs: []
-    m_OriginalText: C_Math
+    m_OriginalText: 
     m_ImportLogFlags: 0
     m_FilterByTypeIntersection: 0
   m_ViewMode: 1
-  m_StartGridSize: 64
+  m_StartGridSize: 16
   m_LastFolders:
-  - Assets
-  m_LastFoldersGridSize: -1
+  - Assets/Scripts
+  m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\Chesh\OneDrive\Documents\GitHub\CatMathAPI\2D Math
     Practise
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 145}
-    m_SelectedIDs: 0a060000
-    m_LastClickedID: 1546
-    m_ExpandedIDs: 000000000a0600001607000038a7000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 1a610000
+    m_LastClickedID: 24858
+    m_ExpandedIDs: 00000000ac25000000610000026100000461000016610000486100004c6100007c610000ce620000de62000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -367,7 +3220,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000000a0600001607000038a7000000ca9a3bffffff7f
+    m_ExpandedIDs: 00000000006100000261000004610000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -394,24 +3247,24 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: Test_C_Set
+      m_OriginalName: Test_C_Set
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 26404
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 0}
+      m_ClientGUIView: {fileID: 7}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -420,10 +3273,10 @@ MonoBehaviour:
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
     m_ScrollPosition: {x: 0, y: 0}
-    m_GridSize: 64
+    m_GridSize: 16
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 207
---- !u!114 &13
+--- !u!114 &16
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -443,10 +3296,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 2390
+    x: 2264
     y: 81
-    width: 261
-    height: 950
+    width: 230
+    height: 957
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -464,13 +3317,13 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 0
+  m_LastVerticalScrollValue: 175
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:
     m_IsLocked: 0
   m_PreviewWindow: {fileID: 0}
---- !u!114 &14
+--- !u!114 &17
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -490,10 +3343,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1544
+    x: 1537
     y: 81
-    width: 208
-    height: 554
+    width: 176
+    height: 558
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -507,9 +3360,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 42fbffff
+      m_SelectedIDs: dcbefdff
+      m_LastClickedID: -147748
+      m_ExpandedIDs: 06c3fdffee2bfeff3889feff8a89feffc28afeff148bfeff548dfeffa68dfeff5e92feffb092feff0894feff6096feffc49efeff169ffeff58a0feffaaa0feffe8a2feff3aa3feff7ca4feffcea4feff12a6feff64a6feffaea7feff00a8feff46a9feff98a9feffdcaafeff2eabfeff70acfeffc2acfeff08aefeff5aaefeffa8affefffaaffeff40b0feff92b0feffd2b2feff24b3feff76b5feffc8b5feff12b6feff64b6feff3ab8feff8cb8feffd2b9feff24bafeff6ebbfeffc0bbfefff8bcfeff4abdfeff90befeffe2befeff28c0feff7ac0feffc0c1feff12c2feff5ac3feffacc3fefff2c5feff44c6feff8ac7feffdcc7feff24c9feff76c9feffbecafeff10cbfeff56ccfeffa8ccfefffacdfeff4ccefeff94cffeffe6cffeff74d2feffbad4feff20ddfeff72ddfeffc6e3feff18e4feff54e6feffa6e6feffe8e9feff3aeafeffd2ebfeff24ecfeff7cedfeffceedfeff20effeff72effeffcaf0feff1cf1feff46f2feff86f4feffd4f6feff26f7feffa4f9fefff6f9feff3cfbfeff8efbfeffd6fcfeff28fdfeff6afffeffbcfffeff0201ffff5401ffff9004ffffe204ffff3006ffff6a08ffffc40afffffc0cffffa40efffff60effff7a0fffffb411ffffee17ffff281affff761cffffdc1cffff3a1effff7220ffffc821ffff1a22ffff5e23ffffb023ffff1a27ffff6c27ffffb028ffff0229ffff4a2affff742cffffb02fffff0230ffff8a31ffffdc31ffff2433ffff7633ffffba35ffffe437ffff583bffffaa3bfffff03cffff423dffff8a3effffdc3effff2240ffff4842ffff8a44ffffdc44ffff1e47ffff4049ffff8e49ffffe049ffff244bffff764bffffba4cffff0c4dffff524effffa44effffe84fffff3a50ffff8251ffffd451ffff1853ffff6a53ffffb054ffff0255ffff4656ffff9856ffffdc58ffff2e59ffff745affffc65affff025effff545effff9460ffffe660ffff3062ffff8262ffffaa65fffffc65ffff4067ffff9267ffffdc67ffff2e68ffff7469ffff9c6bfffff26cffff146fffff4e74ffff7876ffff347bffff867bffffc87cffff1a7dffff5c7effffae7efffff47fffff4a80ffff9e81ffffc283ffff1889ffff368bffff9497ffff2699ffffcea0ffff60a2ffffe6b0ffff7eb2ffff5ebcfffff0bdffff26c9ffff46caffff8ccaffffe2caffffa8cdffffb8ceffffded1ffffb0d2ffff7cd5ffff2ad6fffff0d8ffff76d9ffff70deffffd8defffff4faffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -525,7 +3378,7 @@ MonoBehaviour:
         m_IsRenaming: 0
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 0}
+        m_ClientGUIView: {fileID: 6}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -533,7 +3386,7 @@ MonoBehaviour:
       m_IsLocked: 0
     m_CurrentSortingName: TransformSorting
   m_WindowGUID: 4c969a2b90040154d917609493e03593
---- !u!114 &15
+--- !u!114 &18
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -553,10 +3406,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1753
+    x: 1714
     y: 81
-    width: 635
-    height: 554
+    width: 548
+    height: 558
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -878,6 +3731,19 @@ MonoBehaviour:
       layout: 4
       size: {x: 0, y: 0}
       sizeOverriden: 0
+    - dockPosition: 1
+      containerId: overlay-container--right
+      floating: 0
+      collapsed: 0
+      displayed: 1
+      snapOffset: {x: 48, y: 48}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: UnityEditor.SceneViewCameraOverlay
+      index: 11
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverriden: 0
     m_OverlaysVisible: 1
   m_WindowGUID: cc27987af1a868c49b0894db9c0f5429
   m_Gizmos: 1
@@ -889,9 +3755,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -1.4829663, y: -0.6751144, z: -0.04394336}
+    m_Target: {x: 1.3484926, y: -1.0801702, z: -4.7131147}
     speed: 2
-    m_Value: {x: -1.4829663, y: -0.6751144, z: -0.04394336}
+    m_Value: {x: 1.3484926, y: -1.0801702, z: -4.7131147}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -941,9 +3807,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 4.5714855
+    m_Target: 2.8671548
     speed: 2
-    m_Value: 4.5714855
+    m_Value: 2.8671548
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -968,7 +3834,7 @@ MonoBehaviour:
   m_SceneVisActive: 1
   m_LastLockedObject: {fileID: 0}
   m_ViewIsLockedToObject: 0
---- !u!114 &16
+--- !u!114 &19
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -988,10 +3854,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 507
-    y: 94
-    width: 1532
-    height: 790
+    x: 1714
+    y: 81
+    width: 548
+    height: 558
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -1008,10 +3874,10 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 1532, y: 769}
+  m_TargetSize: {x: 548, y: 537}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
-  m_RenderIMGUI: 0
+  m_RenderIMGUI: 1
   m_EnterPlayModeBehavior: 0
   m_UseMipMap: 0
   m_VSyncEnabled: 0
@@ -1023,10 +3889,10 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -766
-    m_HBaseRangeMax: 766
-    m_VBaseRangeMin: -384.5
-    m_VBaseRangeMax: 384.5
+    m_HBaseRangeMin: -274
+    m_HBaseRangeMax: 274
+    m_VBaseRangeMin: -268.5
+    m_VBaseRangeMax: 268.5
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -1035,7 +3901,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 1
+    m_EnableMouseInput: 0
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -1044,29 +3910,29 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 1532
-      height: 769
+      width: 548
+      height: 537
     m_Scale: {x: 1.25, y: 1.25}
-    m_Translation: {x: 766, y: 384.5}
+    m_Translation: {x: 274, y: 268.5}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -612.8
-      y: -307.6
-      width: 1225.6
-      height: 615.2
+      x: -219.2
+      y: -214.8
+      width: 438.4
+      height: 429.6
     m_MinimalGUI: 1
   m_defaultScale: 1
-  m_LastWindowPixelSize: {x: 1532, y: 790}
+  m_LastWindowPixelSize: {x: 548, y: 558}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
   m_XRRenderMode: 0
   m_RenderTexture: {fileID: 0}
---- !u!114 &17
+--- !u!114 &20
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1086,10 +3952,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 2249
-    y: 726.5
-    width: 920
-    height: 250
+    x: 2020
+    y: 660
+    width: 242
+    height: 378
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0

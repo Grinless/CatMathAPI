@@ -1,0 +1,36 @@
+
+---Generate Parametric Line Equations---
+L(t) = (1 - t)A + t(b)
+
+0 = (1 - t)A + t(B)
+0 = A - tA + t(B)
+0 = A + t(B - A)
+
+Therefore:
+L(t) = A + t(B - A)
+
+L = A + t(B - A)
+K = A + t(B - A)
+
+----------------------------------
+Let line A be given by: 
+P = O1 + K1 * U
+Let line B be given by: 
+P = O2 + K2 * V
+
+----------------------------------
+Solve for U
+---------------------------------
+NOTE: A X A = 0. 
+	  (A + r) X s = a X s + r X s
+	  ---------------------------
+P = r01 + U * rd1 (1)
+P = r02 + V * rd2 (2)
+r01 + U * rd1 = r02 + V * rd2 (3)
+
+ (r01 + U * rd1) X rd2 = (r02 + V * rd2) X rd2
+ (r01 + U * rd1) X rd2 = (r02 X rd2)
+ (r01 X rd2) + U * (rd1 X rd2) = (r02 X rd2)
+ U * (rd1 X rd2) = (r02 X rd2) - (r01 X rd2)
+ U * (rd1 X rd2) = (r02 - r01) X rd2
+ U = ((r02 - r01) X rd2)/(rd1 X rd2)
